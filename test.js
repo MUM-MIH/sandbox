@@ -17,19 +17,5 @@ window.addEventListener('load',function(){
 	else{
 		console.log('not Assessment Section or section 0')
 	}
-	if(window.location.href.match(/grader/) != null){
-    $('.fa-eye-slash').closest('a').before('<span class="badge badge-warning rounded">hidden</span> ')
-    $('.fa-eye').closest('a').before('<span class="badge badge-success rounded">visible</span> ')
-    console.log('on the grader page')
-  }
-  else{
-    console.log('not on the grader page')
-  }
-	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
-	//Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
-	setup_beest(match_lect,{button:true,iFrame:true});
-	/*	var currentURL = window.location.href;
-	var blockTitles = $('aside section .card-title').text();
-	var returnToSectionLink = $('.breadcrumb-item:nth-last-child(2) > a').attr('href');*/
 	//Close load function	
 });
