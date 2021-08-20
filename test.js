@@ -21,7 +21,6 @@ window.addEventListener('load',function(){
 	else{
 		console.log('not Assessment Section or section 0')
 	}
-  });
 	if(window.location.href.match(/grader/) != null){
     $('.fa-eye-slash').closest('a').before('<span class="badge badge-warning rounded">hidden</span> ')
     $('.fa-eye').closest('a').before('<span class="badge badge-success rounded">visible</span> ')
