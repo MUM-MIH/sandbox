@@ -16,7 +16,7 @@ window.addEventListener('load',function(){
 	//make a variable of the section name
 	var assessmentSectionName=$('h3.sectionname').text();
 	//check if it is Education Excellence
-	if (SchoolSpecific.match(/Education Excellence/, /Faculty of Business/) != null && window.location.href.slice(-10) != "&section=0"){
+	if (SchoolSpecific.match(/Education Excellence/,/Faculty of Business and Economics/) != null && window.location.href.slice(-10) != "&section=0"){
 	//check if we are on the key contacts section
 	if (assessmentSectionName.match(/Key Contacts/) != null && window.location.href.slice(-10) != "&section=0"){
 		//check if the assessment text already exists
