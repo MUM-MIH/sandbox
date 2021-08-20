@@ -5,11 +5,17 @@ window.addEventListener('DOMContentLoaded',function(){
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
 	//make a variable of the section name
-	var assessmentSectionName=document.getElementsByTagName("h3")[0];
+	var assessmentSectionName=$('h3.sectionname').text();
 	//check if we are on the assessments section
-	if (assessmentSectionName.id(/key-contacts/)
+	if (assessmentSectionName.match(/Assessment/) != null && window.location.href.slice(-10) != "&section=0"){
+		//check if the assessment text already exists
+		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
+			console.log('text present')
+		}
+		else{
 			//input the text if it isn't already present, after the section name
-			$('h3').after('<h2>Course Management Office</h2><div class="contactscontent"><p><br />The School of Science Course Management Office (CMO) is your go-to hub for the administration of your enrolled course. In some cases, you may also want to approach your CMO for unit-specific issues. This could include instances when you want information on special consideration, unit discontinuation or intermission, or supplementary assessments.<br /><br />Tel: <strong>+ 603 5514 6186 / 6187 / 6120</strong><br />Email: <strong>scienceinquiries.my@monash.edu</strong><br /><br /><br /></p><hr />')
+			console.log('text NOT present')
+			$('h3.sectionname').after('<div id="assessmentPenaltyText"><p>Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:</p><p><em>You will receive a penalty of 10 per cent for late submission, and a further 10 per cent penalty will be applied for each additional day (24-hour period), or part thereof, that the assessment task is overdue. Assessment tasks submitted more than seven days late will not be accepted and will receive a zero mark.</em></p></div>')
 		}
 	}
 	else{
