@@ -7,7 +7,7 @@ window.addEventListener('load',function(){
 	//make a variable of the section name
 	var assessmentSectionName=document.getElementsByTagName("h3")[0];
 	//check if we are on the assessments section
-	if (assessmentSectionName.id(/key-contacts/) != null && window.location.href.slice(-10) != "&section=0"){
+	if (assessmentSectionName.id(/key-contacts/)
 		//check if the assessment text already exists
 		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
 			console.log('text present')
