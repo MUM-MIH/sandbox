@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded',function(){
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
 	//make a variable of the section name
-	var assessmentSectionName=document.getElementsByTagName("h3")[];
+	var assessmentSectionName=document.getElementsByTagName("h3")[0];
 	//check if we are on the assessments section
 	if (assessmentSectionName.id(/key-contacts/) {
 		//check if the assessment text already exists
