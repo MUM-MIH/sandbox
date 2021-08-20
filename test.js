@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded',function(){
+nwindow.addEventListener('DOMContentLoaded',function(){
 	//hide Category wide block that references this script + Arts styles CSS file
 	document.getElementById("inst3098311").classList.add("d-none");
 });
@@ -7,7 +7,7 @@ window.addEventListener('load',function(){
 	//make a variable of the section name
 	var assessmentSectionName=$('.sectionname').text();
 	//check if we are on the assessments section
-	if (assessmentSectionName.match(/Assessment/) != null && window.location.href.slice(-10) != "&section=0"){
+	if (assessmentSectionName.match(/key contacts/) != null && window.location.href.slice(-10) != "&section=0"){
 		//check if the assessment text already exists
 		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
 			console.log('text present')
