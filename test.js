@@ -5,9 +5,9 @@ window.addEventListener('DOMContentLoaded',function(){
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
 	//make a variable of the section name
-	var assessmentSectionName=$('.sectionname').text();
+	var assessmentSectionName=document.getElementsByTagName("h3")[];
 	//check if we are on the assessments section
-	if (assessmentSectionName.match(/Key Contacts/) != null && window.location.href.slice(-10) != "&section=0"){
+	if (assessmentSectionName.id(/key-contacts/) {
 		//check if the assessment text already exists
 		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
 			console.log('text present')
@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
 		else{
 			//input the text if it isn't already present, after the section name
 			console.log('text NOT present')
-			$('#key-contacts').after('<h2>Course Management Office</h2><div class="contactscontent"><p><br />The School of Science Course Management Office (CMO) is your go-to hub for the administration of your enrolled course. In some cases, you may also want to approach your CMO for unit-specific issues. This could include instances when you want information on special consideration, unit discontinuation or intermission, or supplementary assessments.<br /><br />Tel: <strong>+ 603 5514 6186 / 6187 / 6120</strong><br />Email: <strong>scienceinquiries.my@monash.edu</strong><br /><br /><br /></p><hr />')
+			$('h3').after('<h2>Course Management Office</h2><div class="contactscontent"><p><br />The School of Science Course Management Office (CMO) is your go-to hub for the administration of your enrolled course. In some cases, you may also want to approach your CMO for unit-specific issues. This could include instances when you want information on special consideration, unit discontinuation or intermission, or supplementary assessments.<br /><br />Tel: <strong>+ 603 5514 6186 / 6187 / 6120</strong><br />Email: <strong>scienceinquiries.my@monash.edu</strong><br /><br /><br /></p><hr />')
 		}
 	}
 	else{
