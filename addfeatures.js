@@ -10,8 +10,13 @@ window.addEventListener('load',function(){
    		$('.mceToolbarRow2').css('display', 'table');
   		$('.mceToolbarRow3').css('display', 'table');
 	});
-		//make a variable of the section name
+	
+	//make a variable of the section name
+	var SchoolSpecific=$('li.breadcrumb-item').text();
+	//make a variable of the section name
 	var assessmentSectionName=$('h3.sectionname').text();
+	//check if it is Education Excellence
+	if (SchoolSpecific.match(/Education Excellence/) != null && window.location.href.slice(-10) != "&section=0"){
 	//check if we are on the key contacts section
 	if (assessmentSectionName.match(/Key Contacts/) != null && window.location.href.slice(-10) != "&section=0"){
 		//check if the assessment text already exists
@@ -27,7 +32,8 @@ window.addEventListener('load',function(){
 	else{
 		console.log('not Assessment Section or section 0')
 	}
-
+	}
+		
 	//check if we are on the important policy section
 	if (assessmentSectionName.match(/Important Policy/) != null && window.location.href.slice(-10) != "&section=0"){
 		//check if the assessment text already exists
