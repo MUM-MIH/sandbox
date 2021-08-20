@@ -5,7 +5,7 @@ window.addEventListener('load',function(){
 	//check if we are on the assessments section
 	if (assessmentSectionName.match(/Key Contacts/) != null && window.location.href.slice(-10) != "&section=0"){
 		//check if the assessment text already exists
-		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
+		if ($('.label:contains("Course Management Office")').length!=0){
 			console.log('text present')
 		}
 		else{
