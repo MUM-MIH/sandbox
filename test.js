@@ -1,4 +1,4 @@
-nwindow.addEventListener('DOMContentLoaded',function(){
+window.addEventListener('DOMContentLoaded',function(){
 	//hide Category wide block that references this script + Arts styles CSS file
 	document.getElementById("inst3098311").classList.add("d-none");
 });
