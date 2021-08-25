@@ -1,4 +1,3 @@
 if (/section/.test(window.location.href)) {
-        document.getElementById('staffonly').style.display = 'none';
-        event.preventDefault();      
+        document.documentElement.className += ' has-script';   
 }
