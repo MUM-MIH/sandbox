@@ -1,3 +1,3 @@
 if (/section/.test(window.location.href)) {
-        $('#hiddenoverview').hide();
+        document.getElementById('staffonly').style.display = 'none';
       }
