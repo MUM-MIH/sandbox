@@ -104,11 +104,13 @@ html.has-script #hiddenoverview {
 	display: none
 }
 
+html.has-script #staffonly { /* hides all instructions for staff from view EXCEPT in the editor window */
+	display: none
+}
 
 #staffonly { /* hides all instructions for staff from view EXCEPT in the editor window */
 	display: none
 }
-
 /* Anchor links on h2 and h3 headers */
 
 .anchor-heading:target {
