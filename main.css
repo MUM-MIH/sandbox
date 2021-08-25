@@ -100,8 +100,13 @@ a[title="Set or change image"]{ /* hides the change image button on grid icons *
 	display: none;
 }
 
-html.has-script #staffonly { /* hides all instructions for staff from view EXCEPT in the editor window */
-	display: none;
+html.has-script #hiddenoverview {
+	display: none
+}
+
+
+#staffonly { /* hides all instructions for staff from view EXCEPT in the editor window */
+	display: none
 }
 
 /* Anchor links on h2 and h3 headers */
