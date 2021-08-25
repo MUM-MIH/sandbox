@@ -1,0 +1,477 @@
+<style><!--
+
+/* Styles applying to overall site */
+
+li.section .content {
+    		margin: 0 0px !important;
+  	}
+
+#gridshadebox_content .activity {  /* Hides ugly dotted lines seperating activities */
+	border-bottom: none !important;
+}
+
+#section-0 .sectionname{ /* Hides 'overview' title from appearing above the menubar */
+	display:none;
+}
+
+html {
+	font-size: 90%;
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+h3 {
+	font-size: 1.7rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 1.4rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 1.1rem;
+}
+
+p {
+	line-height: 1.3rem;
+}
+
+
+
+pre {   /* overrides pre- style so we can use it as a sub-header/label */
+   	font-size: 1.2rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	background-color: #e6e6e6;
+	padding: 8px 15px;
+	box-shadow: 0px 1px 3px 0px rgba(107, 107, 107, 0.5);
+	white-space: pre-wrap;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+
+h3.sectionname {  /* Style page titles */
+	font-size: 28px;
+	border-bottom: none !important;
+}
+
+.section li.activity {
+	margin-bottom: 0.5em;
+}
+
+#iframe {  /* styles embedded iframes incl. dragdrop videos */
+	width: 100%;
+	max-width: 640px !important;
+	height: auto;
+}
+
+.contentafterlink { /* Puts activity descriptions in a blue bubble */
+	max-width: 600px;
+	margin-left: 0 !important;
+	margin-bottom: 10px;
+	background-color: #deeefb;
+	box-shadow: 0 1px 4px 0 rgba(8,52,104,.5);
+	border-radius: 14px;
+	padding: 3px 15px;
+}
+
+div.contentafterlink > div > div::before { /* Adds speech bubble tail to activity descriptions */
+   content: "";
+  position: absolute;
+  margin-left: 25px;
+  margin-top: -21px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent transparent #deeefb transparent;
+}
+
+a[title="Set or change image"]{ /* hides the change image button on grid icons */
+	display: none;
+}
+
+#staffonly { /* hides all instructions for staff from view EXCEPT in the editor window */
+	line-height:0; 
+  overflow:hidden; 
+  padding:0; 
+  margin:0;
+}
+
+/* Anchor links on h2 and h3 headers */
+
+.anchor-heading:target {
+	margin-top: -110px !important;
+	padding-top: 150px !important;
+}
+
+.anchor-heading .anchor-link {
+  	display: inline-block;
+  	padding-left: .25rem;
+    	text-decoration: none;
+    	opacity: 0;
+    	transition: opacity ease-in-out .25s;
+    	color: #007EA8;
+    	scroll-margin-top: 150px;
+}
+
+.anchor-heading .anchor-link:hover {
+    	opacity: 1 !important;
+}
+
+.anchor-heading:hover .anchor-link {
+    	opacity: .5;
+}
+
+.single-section h2,h3:not(.sectionname) { /* Offset sticky menu on anchor jump and set font color for all h2 headers to blue*/
+	display: inline-block;
+	scroll-margin-top: 150px;
+	color: #007EA8
+}
+
+html{scroll-behavior:smooth}
+
+/* Forums placeholders, headers */
+#forumhead p{
+	margin-left: 88px
+}
+
+
+/* Weekly placeholders, headers */
+
+.circleiconw { /* Normal header orange */
+	background: #db7c00;
+	background-image:linear-gradient(135deg, #db7c00, #db7c00 50%, #c26e00 50%);
+	display: inline-block;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        padding-top: 11px;
+        padding-left: 9px;
+        margin-right: 30px;
+        border: none;
+	font-size: x-small;
+	color: #ffffff;
+}
+
+.circleicontask { /* Weekly task header blue */
+	background: #007EA8;
+	background-image:linear-gradient(135deg, #007EA8, #007EA8 50%, #006F94 50%);
+	display: inline-block;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        padding-top: 12px;
+        padding-left: 9px;
+        margin-right: 25px;
+        border: none;
+	font-size: x-small;
+	color: #ffffff;
+}
+
+.jumbotron { /* Weekly main title grey BG */
+  	background-color: #ECECEC !important;
+ 	padding: 1rem 2rem 2rem;
+}
+
+.weektitle h1{ /* Weekly main title font */
+	font-size: 2rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+.weektitle h3, .weektitle h2{ /* Weekly main title font - makes sure that this title is always accessible if lecturers decide to use headers*/
+	font-size: 2rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: #01506A
+}
+.weekthumb>img { /* Optional Image on right of Weekly Title */
+	float: right;
+	max-width: 300px;
+	max-height: 250px;
+	height: auto;
+	width: auto;
+	padding: 5px;
+	background-color: #FFFFFF;
+	margin: 0 0 5px 30px;
+}
+
+.weeklos p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: 400;
+}
+
+.fullwidthcon {
+	width: 100%;
+}
+
+.boxemphasis {  /* Placeholder - grey text box */
+	background-color: #ECECEC;
+	padding: 1.5em 1.5em 1em;
+	margin-left: 75px;
+}
+
+.vidembed {
+	margin-left: 72px;
+	margin-right: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+
+/* Overview page thumbnail icons */
+
+ul.gridicons li {
+	padding: 0 !important;
+}
+
+.icon_content {
+	color: #484848;
+}
+
+ul.gridicons li .icon_content {
+	padding: 18px 5px !important;
+}
+
+/* Responsive embedded h5p non-video */
+
+.embed-responsive-5by3::before{
+   	padding-top: 62.25%;
+}
+
+.embed-responsive-16by9::before{
+	padding-top: 62.25%;
+}
+
+/* Table (general) styles */
+thead {
+	background-color: #007EA8;
+}
+
+thead td,th:not(#taskbar) {
+	color: #FFFFFF;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: left;
+	padding: 10px
+}
+
+thead td a { color: inherit; } 
+
+table td, th {
+	padding: 10px;
+	margin: 0px;
+	text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  	background-color: #eef1f2;
+}
+
+tbody tr:nth-child(even) {
+  	background-color: #ffffff;
+	border-top: solid 1px #dee2e6;
+	border-bottom: solid 1px #dee2e6;
+}
+
+table {
+	width: 99.9%;
+}
+
+
+/* Table (taskbar) styles */
+
+#taskbar {
+	margin-left: 70px; /* aligns taskbar with left indent */
+	width: auto;
+}
+
+#taskbar thead {
+	background-color: #FFFFFF;
+}
+
+#taskbar thead td {
+	color: #4a4a4a;
+	font-weight: 300;
+	font-size: 15px;
+	padding: 5px 8px 25px;
+}
+
+#taskbar td a { color: inherit; } /* disables the automatic blue colour on links in the taskbar */
+
+#taskbar td,th {
+	padding: 0px 8px;
+	margin: 0px 8px;
+	text-align: center;
+	font-weight: 500;
+}
+
+#taskbar tbody tr:nth-child(odd) {
+  	background-color: #ffffff;
+}
+
+#taskbar tbody tr:nth-child(even) {
+  	background-color: #ffffff;
+	border: none;
+}
+
+@media screen and (max-width: 600px){
+	#taskbar {
+	margin-left: 0;
+	padding: 0;
+	}
+}
+
+
+/* Table (unit calendar) styles */
+
+.caldark thead{
+	background-color: #343a40; /* determines color of header row */
+}
+
+.caldark th{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.caldark thead a{
+	color: inherit; /* disables the automatic blue colour on links in the header */
+}
+
+#calemphasis {
+	background-color: #007EA8; /* determines color of important dates row */
+	color: #ffffff;
+	font-weight: bold
+}
+	
+/* Responsive styles */
+	
+@media screen and (min-width: 768px) {
+/* For tablets and larger */
+	div:not(.embed-responsive)>iframe[src*="panopto"] {
+		 margin-left: 85px;
+		 /* width:86%; */
+		 /* height:350px; */
+  	}
+	.section>li:not(.activity.modtype_label){
+		padding-left: 8em;
+		margin-top: 1em;
+	}
+
+	.readingbox {
+		max-width: 675px;
+		padding-left: 6.2em;
+	}
+	.mediaplugin {
+		padding-left: 86px;
+	}
+	.mediaplugin > div {
+		margin: 0;
+		max-width: 580px !important;
+	}
+	div.circleiconw~p { /* moves all normal p text inside headers */
+	margin-left: 85px;
+	}
+	div.circleiconw~ul, div.circleiconw~ol { /* moves all normal p text inside headers */
+	margin-left: 85px;
+	}
+	.policy-frame {
+		width: 100%;
+		height: 100%;
+		min-height: 1000px;
+		border: none;
+	}
+	.central-info {
+		margin: 40px 40px 40px 60px;
+}
+
+@media screen and (min-width: 1200px) {
+/* For laptops and desktops only*/
+	 div:not(.embed-responsive)>iframe[src*="panopto"] {
+		 margin-left: 85px;
+		 width:45%;
+		 height:226px;
+  	}
+	.policy-frame {
+		width: 100%;
+		min-height: 1100px;
+		border: none;
+	}
+}
+
+@media screen and (min-width: 1800px) {
+/* For laptops and desktops only*/
+	 div:not(.embed-responsive)>iframe[src*="panopto"] {
+		 margin-left: 85px;
+		 width:45%;
+		 height:326px;
+  	}
+	.policy-frame {
+		width: 100%;
+		min-height: 800px;
+		border: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+/* For mobile phones and smaller only */
+  	li.section .content {
+    		margin: 0 0px !important;
+  	}
+	
+	.boxemphasis {
+  		padding: 0.5em;
+  		margin-left: 0;
+	}
+	
+	.jumbotron {
+  		padding: 2rem 1rem 2rem;
+	}
+
+	ul#gtopics{
+		padding-left: 0 !important;
+	}
+	
+	.vidembed {
+	margin-left: 0px;
+	margin-right: auto;
+	padding-right: 0px;
+	padding-left: 0px;
+	}
+	
+	div:not(.embed-responsive)>iframe[src*="panopto"] {
+		 width:100%;
+		 height: 200px;
+		 margin-left: 0;
+  	}
+	
+	path-site li.activity>div, .path-course-view li.activity>div {
+		padding: 0;
+	}
+	
+	.section .label .contentwithoutlink, .section .label .activityinstance {
+		padding-right: 0;
+	}
+	.policy-frame {
+		width: 100%;
+		height: 100%;
+		min-height: 1800px;
+		border: none;
+	}
+		
+}
+
+--></style>
