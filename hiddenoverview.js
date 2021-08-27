@@ -1,6 +1,3 @@
-if (/section/.test(window.location.href)) {
-        document.documentElement.className += ' has-script';   
-}
 //change table row based on sem-break //
   $("tr").each(function(){
     var col_val = $(this).find("td:eq(2)").text();
