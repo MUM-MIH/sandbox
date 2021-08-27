@@ -355,14 +355,16 @@ table {
 	color: inherit; /* disables the automatic blue colour on links in the header */
 }
 
-#calemphasis {
+/*#calemphasis {
 	background-color: #007EA8; /* determines color of important dates row */
 	color: #ffffff;
 	font-weight: bold
-}
+}*/
 
-#caldark .selected{
-	background-color: #343a40;
+.caldark .specialweek{
+	background-color: #007EA8;
+	color: #ffffff;
+	font-weight: bold
 }
 	
 /* Responsive styles */
