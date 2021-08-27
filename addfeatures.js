@@ -50,8 +50,6 @@ window.addEventListener('load',function(){
 		console.log('not Assessment Section or section 0')
 	}
 //change table row based on sem-break //
-
-$(function(){
   $("tr").each(function(){
     var col_val = $(this).find("td:eq(2)").text();
     if( $.trim(col_val.toLowerCase() ) === "swot vac" ){
