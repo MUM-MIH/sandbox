@@ -1,15 +1,10 @@
-jQuery(document).ready(function($) {
-    $('#caldark tr').each(function () {
-       var td_value = $('td',this).eq(2).text();
-       console.log(td_value);
-       switch (td_value) {
-           case 'SWOT':
-                $(this).addClass('bg-success');
-               break;
-
-           default:
-               // statements_def
-               break;
-       }
-    });
+$(function(){
+  $("tr").each(function(){
+    var col_val = $(this).find("td:eq(3)").text();
+    if (col_val == "SWOT"){
+      $(this).addClass('selected');  //the selected class colors the row green//
+    } else {
+      $(this).addClass('bad');
+    }
+  });
 });
