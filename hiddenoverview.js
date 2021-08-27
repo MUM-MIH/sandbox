@@ -1,9 +1,15 @@
-//change table row based on sem-break //
-  $("tr").each(function(){
-    var col_val = $(this).find("td:eq(2)").text();
-    if( $.trim(col_val.toLowerCase() ) === "swot vac" )
-      $(this).addClass('calemphasis');  //the selected class colors the row green//
-    } else {
-      $(this).addClass('bad');
-    }
+jQuery(document).ready(function($) {
+    $('#caldark tr').each(function () {
+       var td_value = $('td',this).eq(2).text();
+       console.log(td_value);
+       switch (td_value) {
+           case 'SWOT VAC':
+                $(this).addClass('bg-success');
+               break;
+
+           default:
+               // statements_def
+               break;
+       }
+    });
 });
