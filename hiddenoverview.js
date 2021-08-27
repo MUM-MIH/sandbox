@@ -9,5 +9,4 @@ if (/section/.test(window.location.href)) {
     } else {
       $(this).addClass('bad');
     }
-  });
 });
