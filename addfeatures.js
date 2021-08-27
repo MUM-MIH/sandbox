@@ -55,7 +55,7 @@ window.addEventListener('load',function(){
     if( $.trim(col_val.toLowerCase() ) === "swot vac" ){
       $(this).addClass('specialweek');  //the selected class colors the row green//
     } 
-	if( $.trim(col_val.toLowerCase() ) === "mid-semester break" ){
+	else if( $.trim(col_val.toLowerCase() ) === "mid-semester break" ){
       $(this).addClass('specialweek');  //the selected class colors the row green//
     }   
 	  else {
