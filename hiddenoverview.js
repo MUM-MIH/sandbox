@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
        var td_value = $('td',this).eq(2).text();
        console.log(td_value);
        switch (td_value) {
-           case 'SWOT VAC':
+           case 'SWOT':
                 $(this).addClass('bg-success');
                break;
 
