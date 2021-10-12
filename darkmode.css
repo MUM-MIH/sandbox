@@ -19,11 +19,13 @@ body a:hover{
 
 #block-region-side-pre section.card{
     background-color: #2d3848;
+	border-radius: 5px;
 }
 
 #block-region-side-pre .card-title{
     background-color: #3a4556;
-    color: white
+    color: white;
+	border-radius: 5px;
 }
 
 .acctab-content{
