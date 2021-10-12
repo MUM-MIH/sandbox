@@ -1,5 +1,5 @@
 /* darkmode */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark), [data-theme="dark"]  {
 body{
 	background-color: #1a202c;
 	color: #fff;
