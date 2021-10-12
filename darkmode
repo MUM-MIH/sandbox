@@ -1,0 +1,163 @@
+/* darkmode */
+@media (prefers-color-scheme: dark) {
+body{
+	background-color: #1a202c;
+	color: #fff;
+}
+
+body a{
+	color: #7be1ff
+}
+
+body a:hover{
+	color:white
+}
+
+.path-course #region-main {
+    background-color: #2d3848;
+}
+
+#block-region-side-pre section.card{
+    background-color: #2d3848;
+}
+
+#block-region-side-pre .card-title{
+    background-color: #3a4556;
+    color: white
+}
+
+.acctab-content{
+	background-color:#2d3848 !important;
+	color: white !important;
+}
+
+.acctab td {
+	background-color:#2d3848 !important;
+}
+
+input:checked + .acctab-label{
+	background-color: #61a0bc !important;
+	color: #2d3848 !important
+}
+
+.format-grid .course-content ul.gridicons li .gridicon_link{
+	background-color: transparent;
+}
+.course-content ul.gridicons li .image_holder{
+	background-color: transparent !important;
+}
+
+.icon_content {
+	color: #e2e2e2 !important
+}
+
+.icon_content:focus{
+	color: #79cec4
+} 
+
+.image_holder  {
+    filter: brightness(0.8) contrast(1.4);
+  }
+
+img  {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+.arts-banner-nav a:hover,.arts-banner-nav a:focus{
+	background-color:#61a0bc;
+	color:#141414 !important
+}
+
+.arts-banner-nav{
+	background:#4a5568
+}
+
+.arts-banner-dropdown-content{
+	background-color: #4a5568 !important;
+	color: #ffffff
+}
+.arts-banner-dropdown-content a{
+	color: #ffffff
+}
+
+.single-section h3.sectionname{
+	color: #ffffff
+}
+
+.caldark thead, .caldark th{
+	background-color: #1a202c !important;
+}
+
+
+:not(.acctab-content)>table:not(#taskbar) tbody tr{
+	background-color: #545b65 !important;
+	border-bottom: #3e4248 solid 1px;
+	border-top: none;
+}
+
+.caldark .specialweek, #calemphasis{
+	background-color:#61a0bc;
+	color: #2d3848 !important
+}
+
+.single-section h2, h3:not(.sectionname){
+	color: #dcdbdb !important
+}
+
+table:not(.table):not(.caldark):not(#user-grades):not(#taskbar)>thead, table:not(.table):not(.caldark):not(#user-grades) th:not(thead){
+	background-color:#61a0bc !important;
+}
+
+.contentafterlink {
+    background-color: #456178;
+    box-shadow: 0 1px 4px 0 rgb(74 77 79 / 50%);
+}
+
+div.contentafterlink > div > div::before {
+    border-color: transparent transparent #456178 transparent !important;
+}
+
+p span{
+	    filter: brightness(1.3) contrast(1);
+}
+
+.jumbotron {
+    background-color: #4a5568 !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	color: #dcdbdb
+}
+
+#taskbar thead td {
+    background-color: transparent !important;
+    color: #dcdbdb !important
+}
+
+#taskbar tbody tr:nth-child(odd) {
+  	background-color: transparent !important;
+}
+
+#taskbar tbody tr:nth-child(even) {
+  	background-color: transparent !important;
+	border: none;
+}
+
+#taskbar thead {
+	background-color: transparent !important;
+}
+
+.circleicontask {
+	filter: brightness(1.3) contrast(0.9);
+}
+
+.circleiconw {
+	filter: brightness(.9) contrast(1.2);
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #4a5568;
+    border-color: #343a40;
+}
+}
