@@ -1,165 +1,193 @@
 /* darkmode */
-@media (prefers-color-scheme: dark), [data-theme="dark"]  {
+@media (prefers-color-scheme: dark), .dark-mode  {
+.dark-mode{
+	--BG1:#1a202c;
+	--BG2:#2d3848;
+	--BG3:#3a4556;
+	--filter: brightness(0.8) contrast(1.4);
+	--link-color: #7be1ff;
+	--text-norm: #ffffff;
+	--text-emphasis: #1a202c;
+	--text-muted: #e2e2e2;
+	--BG-none: transparent;
+	--blue-emphasis:#3F7892;
+	--darkblue: #456178;
+	--black: #1a202c;
+	--text-filter:brightness(1.4) contrast(1.2);
+
+}
+
+
 body{
-	background-color: #1a202c;
-	color: #fff;
+	background-color: var(--BG1);
+	color: var(--text-norm);
 }
 
 body a{
-	color: #7be1ff
+	color: var(--link-color)
 }
 
 body a:hover{
-	color:white
+	color:var(--text-norm)
 }
 
 .path-course #region-main {
-    background-color: #2d3848;
+    background-color: var(--BG2);
 }
 
 #block-region-side-pre section.card{
-    background-color: #2d3848;
+    background-color: var(--BG2);
 	border-radius: 5px;
 }
 
 #block-region-side-pre .card-title{
-    background-color: #3a4556;
-    color: white;
+    background-color: var(--BG3);
+    color: var(--text-norm);
 	border-radius: 5px;
 }
 
 .acctab-content{
-	background-color:#2d3848 !important;
-	color: white !important;
+	background-color: var(--BG2) !important;
+	color: var(--text-norm) !important;
 }
 
 .acctab td {
-	background-color:#2d3848 !important;
+	background-color: var(--BG2) !important;
 }
 
 input:checked + .acctab-label{
-	background-color: #61a0bc !important;
-	color: #2d3848 !important
+	background-color: var(--blue-emphasis) !important;
+	color: var(--text-norm) !important;
 }
 
 .format-grid .course-content ul.gridicons li .gridicon_link{
-	background-color: transparent;
+	background-color: var(--BG-none);
 }
 .course-content ul.gridicons li .image_holder{
-	background-color: transparent !important;
+	background-color:  var(--BG-none) !important;
 }
 
 .icon_content {
-	color: #e2e2e2 !important
+	color: var(--text-muted)
 }
 
 .icon_content:focus{
-	color: #79cec4
+	color: var(--link-color)
 } 
 
 .image_holder  {
-    filter: brightness(0.8) contrast(1.4);
+    filter: var(--filter);
   }
 
 img  {
-    filter: brightness(0.8) contrast(1.2);
+    filter: var(--filter);
   }
 
 .arts-banner-nav a:hover,.arts-banner-nav a:focus{
-	background-color:#61a0bc;
-	color:#141414 !important
+	background-color:var(--darkblue);
+	color:var(--text-norm)
 }
 
 .arts-banner-nav{
-	background:#4a5568
+	background:var(--blue-emphasis)
 }
 
 .arts-banner-dropdown-content{
-	background-color: #4a5568 !important;
-	color: #ffffff
+	background-color: var(--BG3) !important;
+	color: var(--text-norm);
 }
 .arts-banner-dropdown-content a{
-	color: #ffffff
+	color: var(--text-norm);
 }
 
 .single-section h3.sectionname{
-	color: #ffffff
+	color: var(--text-norm);
 }
 
 .caldark thead, .caldark th{
-	background-color: #1a202c !important;
+	background-color: var(--black);
 }
 
 
 :not(.acctab-content)>table:not(#taskbar) tbody tr{
-	background-color: #545b65 !important;
-	border-bottom: #3e4248 solid 1px;
+	background-color: var(--BG3) !important;
+	border-bottom: var(--BG1) solid 1px;
 	border-top: none;
 }
 
 .caldark .specialweek, #calemphasis{
-	background-color:#61a0bc;
-	color: #2d3848 !important
+	background-color:var(--blue-emphasis);
+	color: var(--BG2) !important
 }
 
 .single-section h2, h3:not(.sectionname){
-	color: #dcdbdb !important
+	color: var(--text-muted)
 }
 
 table:not(.table):not(.caldark):not(#user-grades):not(#taskbar)>thead, table:not(.table):not(.caldark):not(#user-grades) th:not(thead){
-	background-color:#61a0bc !important;
+	background-color:var(--blue-emphasis) !important;
 }
 
 .contentafterlink {
-    background-color: #456178;
+    background-color: var(--lightblue);
     box-shadow: 0 1px 4px 0 rgb(74 77 79 / 50%);
 }
 
 div.contentafterlink > div > div::before {
-    border-color: transparent transparent #456178 transparent !important;
+    border-color: transparent transparent var(--darkblue) transparent !important;
 }
 
 p span{
-	    filter: brightness(1.3) contrast(1);
+	    filter: var(--text-filter)
 }
 
 .jumbotron {
-    background-color: #4a5568 !important;
+    background-color: var(--BG3) !important;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-	color: #dcdbdb
+	color: var(--text-muted)
 }
 
 #taskbar thead td {
-    background-color: transparent !important;
-    color: #dcdbdb !important
+    background-color: var(--BG-none) !important;
+    color: var(--text-muted) !important
 }
 
 #taskbar tbody tr:nth-child(odd) {
-  	background-color: transparent !important;
+  	background-color: var(--BG-none) !important;
 }
 
 #taskbar tbody tr:nth-child(even) {
-  	background-color: transparent !important;
+  	background-color: var(--BG-none) !important;
 	border: none;
 }
 
 #taskbar thead {
-	background-color: transparent !important;
-}
-
-.circleicontask {
-	filter: brightness(1.3) contrast(0.9);
+	background-color: var(--BG-none) !important;
 }
 
 .circleiconw {
-	filter: brightness(.9) contrast(1.2);
+	filter: var(--filter);
 }
 
 .btn-dark {
-    color: #fff;
-    background-color: #4a5568;
-    border-color: #343a40;
+    color: var(--text-norm);
+    background-color: var(--blue-emphasis);
+    border-color: var(--BG3);
+}
+
+.boxemphasis {
+	background-color: var(--BG3)
+}
+
+#gridshadebox_content {
+	background-color: var(--BG2)
+
+}
+
+ul.topics li.section.hidden, ul.gtopics li.section.hidden {
+	background-color: #64728a
+}
 }
 }
