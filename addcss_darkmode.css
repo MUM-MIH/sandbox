@@ -124,9 +124,9 @@ div.contentafterlink > div > div::before {
     border-color: transparent transparent var(--lightblue) transparent !important;
 }
 
-p span{
+/*p span{
 	    filter: var(--text-filter);
-}
+}*/
 
 .jumbotron {
     background-color: var(--BG3) !important;
