@@ -1,0 +1,536 @@
+/* Styles applying to overall site */
+
+:root{
+	--BG1:#ffffff;
+	--BG2:#fff;
+	--BG3:#eeeeee;
+	--filter: none;
+	--link-color: #006080;
+	--text-norm: #4a5056;
+	--text-emphasis: #ffffff;
+	--text-muted: #555557;
+	--text-blue: #016080;
+	--BG-none: transparent;
+	--blue-emphasis:#007EA8;
+	--darkblue: #00678A;
+	--lightblue: #deeefb;
+	--black: #343a40;
+	--text-filter:none;
+	--row: #ffffff;
+	--row-odd: #eef1f2;
+	--invert: none;
+}
+
+.dark-mode{
+	--BG1:#1a202c;
+	--BG2:#2d3848;
+	--BG3:#3a4556;
+	--filter: brightness(0.8) contrast(1.4);
+	--link-color: #7be1ff;
+	--text-norm: #ffffff;
+	--text-emphasis: #fff;
+	--text-muted: #e2e2e2;
+	--text-blue: #e2e2e2;
+	--BG-none: transparent;
+	--blue-emphasis:#3F7892;
+	--darkblue: #456178;
+	--lightblue:#456178;
+	--black: #1a202c;
+	--text-filter:brightness(1.4) contrast(1.2);
+	--row: #3a4556;
+	--row-odd: #3a4556;
+	--darken: brightness(60%);
+	--invert: invert(100%)
+}
+
+
+
+
+li.section .content {
+    		margin: 0 0px !important;
+  	}
+
+
+#gridshadebox_content .activity {  /* Hides ugly dotted lines seperating activities */
+	border-bottom: none !important;
+}
+
+#section-0 .sectionname{ /* Hides 'overview' title from appearing above the menubar */
+	display:none;
+}
+
+html {
+	font-size: 90%;
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+h3 {
+	font-size: 1.7rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 1.4rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 1.1rem;
+}
+
+p {
+	line-height: 1.3rem;
+}
+
+
+
+pre {   /* overrides pre- style so we can use it as a sub-header/label */
+   	font-size: 1.2rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	background-color: var(--BG3);
+	padding: 8px 15px;
+	box-shadow: 0px 1px 3px 0px rgba(107, 107, 107, 0.5);
+	white-space: pre-wrap;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+
+h3.sectionname {  /* Style page titles */
+	font-size: 28px;
+	border-bottom: none !important;
+}
+
+.section li.activity {
+	margin-bottom: 0.5em;
+}
+
+#iframe {  /* styles embedded iframes incl. dragdrop videos */
+	width: 100%;
+	max-width: 640px !important;
+	height: auto;
+}
+
+.contentafterlink { /* Puts activity descriptions in a blue bubble */
+	max-width: 600px;
+	margin-left: 0 !important;
+	margin-bottom: 10px;
+	background-color: var(--lightblue);
+	box-shadow: 0 1px 4px 0 rgba(8,52,104,.5);
+	border-radius: 14px;
+	padding: 3px 15px;
+}
+
+div.contentafterlink > div > div::before { /* Adds speech bubble tail to activity descriptions */
+   content: "";
+  position: absolute;
+  margin-left: 25px;
+  margin-top: -28px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent transparent var(--lightblue) transparent;
+}
+
+#staffonly { /* hides all instructions for staff from view EXCEPT in the editor window */
+	display: none;
+}
+
+/* Styles to stop staff from changing things in template */
+
+a[title="Set or change image"]{ /* hides the change image button on grid icons */
+	display: none
+}
+
+.section_action_menu { /* Hides section edit button */
+	display: none
+}
+
+li:not(#section-0) .content>.summary { /* Hides section descriptions */
+	display:none
+}
+ 
+.section-handle { /* Hides section crosshairs and prevents moving of sections */
+	display:none
+}
+
+.quickeditlink { /* Disables quick edit of section titles */
+	pointer-events: none;
+	cursor: default;
+}
+
+.jsenabled .visibleifjs { /* Hides quick edit icon */
+    display: inline;
+    opacity: 0;
+}
+
+#changenumsections { /* Hides buttons for adding and deleting sections */
+	display: none
+}
+
+a[title="Edit summary"]{ /* Hides edit cog from menubar, disables editing menubar */
+	display: none
+}
+
+/* Anchor links on h2 and h3 headers */
+
+.anchor-heading:target {
+	margin-top: -110px !important;
+	padding-top: 150px !important;
+}
+
+.anchor-heading .anchor-link {
+  	display: inline-block;
+  	padding-left: .25rem;
+    	text-decoration: none;
+    	opacity: 0;
+    	transition: opacity ease-in-out .25s;
+    	color: var(--blue-emphasis);
+    	scroll-margin-top: 150px;
+}
+
+.anchor-heading .anchor-link:hover {
+    	opacity: 1 !important;
+}
+
+.anchor-heading:hover .anchor-link {
+    	opacity: .5;
+}
+
+.single-section h2,h3:not(.sectionname) { /* Offset sticky menu on anchor jump and set font color for all h2 headers to blue*/
+	display: inline-block;
+	scroll-margin-top: 150px;
+	color: var(--text-blue)
+}
+
+html{scroll-behavior:smooth}
+
+/* Weekly placeholders, headers */
+
+.circleiconw { /* Normal header orange */
+	background: #db7c00;
+	background-image:linear-gradient(135deg, #db7c00, #db7c00 50%, #c26e00 50%);
+	display: inline-block;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        padding-top: 11px;
+        padding-left: 9px;
+        margin-right: 30px;
+        border: none;
+	font-size: x-small;
+	color: var(--text-emphasis);
+	filter: var(--filter);
+}
+
+.circleicontask { /* Weekly task header blue */
+	background: #007EA8;
+	background-image:linear-gradient(135deg, #007EA8, #007EA8 50%, #006F94 50%);
+	display: inline-block;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        padding-top: 12px;
+        padding-left: 9px;
+        margin-right: 25px;
+        border: none;
+	font-size: x-small;
+	color: var(--text-emphasis);
+}
+
+.jumbotron { /* Weekly main title grey BG */
+  	background-color: var(--BG3) !important;
+ 	padding: 1rem 2rem 2rem;
+}
+
+.weektitle h1{ /* Weekly main title font */
+	font-size: 2rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+.weektitle h3, .weektitle h2{ /* Weekly main title font - makes sure that this title is always accessible if lecturers decide to use headers*/
+	font-size: 2rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: var(--text-muted)
+}
+.weekthumb>img { /* Optional Image on right of Weekly Title */
+	float: right;
+	max-width: 300px;
+	max-height: 250px;
+	height: auto;
+	width: auto;
+	padding: 5px;
+	background-color: var(--BG1);
+	margin: 0 0 5px 30px;
+}
+
+.weeklos p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: 400;
+}
+
+.fullwidthcon {
+	width: 100%;
+}
+
+.boxemphasis {  /* Placeholder - grey text box */
+	background-color: var(--BG3);
+	padding: 1.5em 1.5em 1em;
+}
+
+.vidembed {
+	margin-right: auto;
+    /*	padding-right: 15px;
+	padding-left: 15px; */
+}
+
+
+/* Overview page thumbnail icons */
+
+ul.gridicons li {
+	padding: 0 !important;
+}
+
+.icon_content {
+	color: var(--text-muted)
+}
+
+.icon_content:focus {
+	color: var(--link-color)
+} 
+
+ul.gridicons li .icon_content {
+	padding: 18px 5px !important;
+}
+
+#gridshadebox_content {
+	background-color: var(--BG2)
+
+}
+.format-grid .course-content ul.gridicons li .gridicon_link{
+	background-color: var(--BG-none);
+}
+.course-content ul.gridicons li .image_holder{
+	background-color:  var(--BG-none) !important;
+}
+
+.image_holder  {
+    filter: var(--filter);
+  }
+
+.image_holder:hover {
+	filter:brightness(90%)
+}
+
+/* Responsive embedded h5p non-video */
+
+.embed-responsive-5by3::before{
+   	padding-top: 62.25%;
+}
+
+.embed-responsive-16by9::before{
+	padding-top: 62.25%;
+}
+
+/* Table (taskbar) styles */
+
+
+#taskbar {
+/*	margin-left: 70px; aligns taskbar with left indent */
+	width: auto;
+}
+
+#taskbar thead {
+	background-color: var(--BG-none);
+}
+
+#taskbar thead td {
+	color: var(--text-muted);
+	font-weight: 300;
+	font-size: 15px;
+	padding: 5px 8px 25px;
+}
+
+#taskbar td a { color: inherit; } /* disables the automatic blue colour on links in the taskbar */
+
+#taskbar td,th {
+	padding: 0px 8px;
+	margin: 0px 8px;
+	text-align: center;
+	font-weight: 500;
+}
+
+#taskbar tbody tr:nth-child(odd) {
+  	background-color: var(--BG-none);
+}
+
+#taskbar tbody tr:nth-child(even) {
+  	background-color: var(--BG-none);
+	border: none;
+}
+
+@media screen and (max-width: 600px){
+	#taskbar {
+	margin-left: 0;
+	padding: 0;
+	}
+}
+
+
+/* Table (unit calendar) styles */
+
+
+.caldark thead, .caldark th{
+	background-color: var(--black); /* determines color of header row */
+	color: var(--text-emphasis);
+	font-weight: bold;
+}
+
+.caldark thead a{
+	color: inherit; /* disables the automatic blue colour on links in the header */
+}
+
+.caldark .specialweek, #calemphasis{ /* styles any row with "mid-semester break" or "Swot Vac" in the description - uses js */
+	background-color: var(--blue-emphasis);
+	color: var(--text-emphasis);
+	font-weight: bold
+}
+	
+/* Responsive styles */
+	
+@media screen and (min-width: 768px) {
+/* For tablets and larger */
+	div:not(.embed-responsive)>iframe[src*="panopto"],div:not(.embed-responsive)>p>iframe[src*="panopto"] {
+   		 width: 100% !important;
+         	height: 35vw;
+  	}
+	.section li.activity {
+	/*	padding-left: 8em; */
+		margin-top: 1em;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	
+	.section>li:not(.activity.modtype_label){
+		padding-left: 2em;
+	}
+	
+	.no-overflow {
+		overflow: visible
+	}
+	
+	.circleiconw {
+		margin-left: -89px
+	}
+	
+	.circleicontask {
+		margin-left: -89px
+	}
+
+	.readingbox {
+		max-width: 675px;
+	}
+
+	.mediaplugin > div {
+		margin: 0;
+		max-width: 580px !important;
+	}
+	
+	.policy-frame {
+		width: 100%;
+		height: 100%;
+		min-height: 1000px;
+		border: none;
+	}
+	.central-info {
+		margin: 40px 80px 40px 110px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+/* For laptops and desktops only*/
+	 div:not(.embed-responsive)>iframe[src*="panopto"],div:not(.embed-responsive)>p>iframe[src*="panopto"] {
+		width: calc(50% - 15px) !important;
+         	height: 15vw;
+  	}
+	.policy-frame {
+		width: 100%;
+		min-height: 1100px;
+		border: none;
+	}
+}
+
+@media screen and (min-width: 1800px) {
+/* For laptops and desktops only*/
+	 div:not(.embed-responsive)>iframe[src*="panopto"],div:not(.embed-responsive)>p>iframe[src*="panopto"] {
+		width: calc(50% - 15px) !important;
+         	height: 18vw;
+  	}
+	.policy-frame {
+		width: 100%;
+		min-height: 800px;
+		border: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+/* For mobile phones and smaller only */
+  	li.section .content {
+    		margin: 0 0px !important;
+  	}
+	
+	.boxemphasis {
+  		padding: 0.5em;
+  		margin-left: 0;
+	}
+	
+	.jumbotron {
+  		padding: 2rem 1rem 2rem;
+	}
+
+	ul#gtopics{
+		padding-left: 0 !important;
+	}
+	
+	.vidembed {
+	margin-left: 0px;
+	margin-right: auto;
+	padding-right: 0px;
+	padding-left: 0px;
+	}
+	
+	div:not(.embed-responsive)>iframe[src*="panopto"],div:not(.embed-responsive)>p>iframe[src*="panopto"] {
+		 width:100%;
+		 margin-left: 0;
+         	 height: 55vw;
+  	}
+	
+	path-site li.activity>div, .path-course-view li.activity>div {
+		padding: 0;
+	}
+	
+	.section .label .contentwithoutlink, .section .label .activityinstance {
+		padding-right: 0;
+	}
+	.policy-frame {
+		width: 100%;
+		height: 100%;
+		min-height: 1800px;
+		border: none;
+	}
+	div.contentafterlink > div > div::before {
+    		margin-top: -22px;
+	}
+}
