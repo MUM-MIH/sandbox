@@ -107,10 +107,6 @@ img  {
 	color: var(--text-muted);
 }
 
-.single-section h2, h3:not(.sectionname){
-	color: var(--text-muted)
-}
-
 table:not(.table):not(.caldark):not(#user-grades):not(#taskbar)>thead, table:not(.table):not(.caldark):not(#user-grades) th:not(thead){
 	background-color:var(--blue-emphasis) !important;
 }
