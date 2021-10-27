@@ -1,0 +1,113 @@
+
+/*Hides and disables option in Settings that allows adding or removing sections */
+select#id_numsections{
+	display:none
+}
+
+
+/* overrides pre- style so we can use it as a sub-header/label, except in HTML editor*/
+pre:not(.CodeMirror pre) { 
+   	font-size: 1rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	background-color: var(--BG3);
+	padding: 8px 15px;
+	box-shadow: 0px 1px 3px 0px rgba(107, 107, 107, 0.5);
+	white-space: pre-wrap;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+pre:not(.CodeMirror pre):hover {
+	background-color: var(--blue-emphasis);
+	color: var(--text-emphasis) !important;
+}
+
+pre:not(.CodeMirror pre) a:hover {
+	text-decoration: none;
+    	color: var(--text-emphasis);
+    
+}
+
+/* Table (general) styles */
+table:not(.table):not(.caldark):not(#user-grades):not(#taskbar)>thead, table:not(.table):not(.caldark):not(#user-grades) th:not(thead) {
+	background-color: var(--blue-emphasis);
+        color: var(--text-emphasis);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: left;
+	padding: 10px;
+}
+
+
+thead td a { color: inherit; } 
+
+table:not(.table):not(.caldark):not(#user-grades):not(#taskbar)>thead a, table:not(.table):not(.caldark):not(#user-grades) th:not(thead) a{
+	color: var(--text-emphasis);
+	text-decoration: underline;
+}
+
+table td, th {
+	padding: 10px;
+	margin: 0px;
+	text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  	background-color: var(--row-odd);
+}
+
+tbody tr:nth-child(even) {
+  	background-color: var(--row);
+	border-top: solid 1px #dee2e65e;
+	border-bottom: solid 1px #dee2e65e;
+}
+
+table {
+	width: 99.9%;
+}
+
+
+.generaltable{
+	color:var(--text-norm)
+}
+
+
+.path-grade-report-grader .gradeparent .cell.category, .path-grade-report-grader .gradeparent tr .cell {
+	background-color: var(--BG-none) !important
+}
+
+.form-control {
+	background-color: var(--BG1)
+}
+
+.form-control:focus {
+	background-color: var(--BG1);
+	color: var(--text-norm);
+	border: 2px solid var(--link-color); 
+	box-shadow: none
+}
+
+/* Dark mode Toggle */
+
+.darkbutton {
+  background-color: var(--blue-emphasis);
+  border: none;
+  color: var(--text-emphasis);
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 15px;
+}
+
+#darkmode {
+	display:block;
+	width: 70%;
+	margin-left: auto;
+	margin-right:auto
+}
