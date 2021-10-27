@@ -1,4 +1,479 @@
 
+:root{
+	--BG1:#ffffff;
+	--BG2:#fff;
+	--BG3:#eeeeee;
+	--filter: none;
+	--link-color: #006080;
+	--text-norm: #4a5056;
+	--text-emphasis: #ffffff;
+	--text-muted: #555557;
+	--text-blue: #016080;
+	--BG-none: transparent;
+	--blue-emphasis:#007EA8;
+	--darkblue: #00678A;
+	--lightblue: #deeefb;
+	--black: #343a40;
+	--text-filter:none;
+	--row: #ffffff;
+	--row-odd: #eef1f2;
+	--invert: none;
+}
+
+.dark-mode{
+	--BG1:#1a202c;
+	--BG2:#2d3848;
+	--BG3:#3a4556;
+	--filter: brightness(0.8) contrast(1.4);
+	--link-color: #7be1ff;
+	--text-norm: #ffffff;
+	--text-emphasis: #fff;
+	--text-muted: #e2e2e2;
+	--text-blue: #e2e2e2;
+	--BG-none: transparent;
+	--blue-emphasis:#3F7892;
+	--darkblue: #456178;
+	--lightblue:#456178;
+	--black: #1a202c;
+	--text-filter:invert(100%);
+	--row: #3a4556;
+	--row-odd: #3a4556;
+	--darken: brightness(60%);
+	--invert: invert(100%);
+}
+
+body{
+	background-color: var(--BG1);
+	color: var(--text-norm);
+}
+
+body a{
+	color: var(--link-color)
+}
+
+body a:hover{
+	color:var(--text-norm)
+}
+
+.path-course #region-main {
+    background-color: var(--BG2);
+}
+
+#region-main {
+	background-color: var(--BG2)
+}
+
+#block-region-side-pre section.card{
+    background-color: var(--BG2);
+	border-radius: 5px;
+}
+
+#block-region-side-pre .card-title{
+    background-color: var(--BG3);
+    color: var(--text-norm);
+	border-radius: 5px;
+}
+
+.region_main_settings_menu_proxy {
+	background-color: var(--BG2)
+}
+
+.bg-white {
+	filter: var(--darken)
+}
+
+img  {
+    filter: var(--filter);
+  }
+
+.arts-banner-nav a:hover,.arts-banner-nav a:focus{
+	background-color:var(--darkblue);
+	color:var(--text-emphasis)
+}
+
+.arts-banner-nav{
+	background:var(--blue-emphasis)
+}
+
+.arts-banner-dropdown-content{
+	background-color: var(--BG2) !important;
+	color: var(--text-norm);
+}
+.arts-banner-dropdown-content a{
+	color: var(--text-norm);
+}
+
+.single-section h3.sectionname{
+	color: var(--text-muted);
+}
+
+.single-section h2, h3:not(.sectionname){
+	color: var(--text-muted)
+}
+
+table:not(.table):not(.caldark):not(#user-grades):not(#taskbar)>thead, table:not(.table):not(.caldark):not(#user-grades) th:not(thead){
+	background-color:var(--blue-emphasis) !important;
+}
+
+.contentafterlink {
+    background-color: var(--lightblue);
+    box-shadow: 0 1px 4px 0 rgb(74 77 79 / 50%);
+}
+
+div.contentafterlink > div > div::before {
+    border-color: transparent transparent var(--lightblue) transparent !important;
+}
+
+p span{
+	    filter: var(--text-filter);
+}
+
+.jumbotron {
+    background-color: var(--BG3) !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	color: var(--text-muted)
+}
+
+
+.btn-dark, .btn-primary {
+    color: var(--text-emphasis);
+    background-color: var(--blue-emphasis);
+    border-color: var(--BG3);
+}
+
+.btn-dark:hover, .btn-primary:hover {
+    background-color: var(--darkblue)
+}
+
+ul.topics li.section.hidden, ul.gtopics li.section.hidden {
+	background-color: var(--BG3)
+}
+
+hr {
+	filter: var(--invert);
+}
+
+/*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-3098311. This also hides inst3242994 which refers to the logged in user block at category level*/
+.card-body .card-text:nth-child(1){
+		display: none;
+}
+ .card-body .block-controls:nth-child(1){
+		display: none;
+}
+
+/*this styles the add an activity/resource button*/
+.section-modchooser-link {
+display: inline-flex !important;
+float: right !important;
+line-height: 1.5rem !important;
+vertical-align: middle;
+text-align: center;
+white-space: nowrap;
+font-weight: 500;
+border: 2px solid transparent;
+margin-bottom: 1.5rem;
+color: (--text-emphasis) !important;
+text-decoration: none !important;
+background: var(--black);
+padding: 5px 12px;
+white-space: nowrap;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
+border-radius: 2px;
+}
+
+.btn-link {
+	color: var(--text-emphasis)
+}
+/*this styles the add an activity/resource button when you hover over it*/
+.section-modchooser-link:hover {
+background: var(--darkblue);
+color: var(--text-emphasis) !important;
+cursor: pointer;
+}
+/*this styles the add an activity/resource button when you click on it*/
+.section-modchooser-link:focus {
+background: var(--darkblue) !important;
+color: var(--text-emphasis) !important;
+border-color: var(--darkblue) !important;
+box-shadow: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*this styles the add an activity/resource button after the click*/
+.section-modchooser-link:active {
+background: var(--darkblue) !important;
+color: var(--text-emphasis)!important;
+box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+border: 2px solid var(--darkblue) !important;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*this styles the add an activity/resource button icon to ensure it sits on the same alignment as the text*/
+.section-modchooser-link i {
+line-height: 1.5rem !important;
+}
+
+/*This ensures the tinyMCE takes up 100% of the width of the container it sits in.*/
+.mceLayout {
+  width:100% !important;
+}
+
+/*This increases default height of the Attoeditor */
+div#id_introeditoreditable {
+	min-height: 600px !important;
+}
+
+div#id_content_editoreditable { /*This increases default height of the Attoeditor in Books */
+	min-height: 600px !important;
+}
+
+/*This ensures there is no space at the top of the blocks on the right*/
+.block .content {
+  margin-top: 0px !important;
+}
+/*This ensures there is no space at the bottom of alerts*/
+.alert p:last-of-type {
+margin-bottom: 0px !important;
+}
+
+/*The following list style Moodle lessons*/
+.branchbuttoncontainer .btn-secondary {
+background-color: var(--blue-emphasis) !important; /* changes the navigation button color to blue */
+color: var(--text-emphasis); /* changes the navigation button font color to white */
+}
+
+.branchbuttoncontainer {
+display: flex;
+justify-content: space-evenly; /* spaces out and centres the navigation buttons */
+margin-top: 30px;
+}
+
+.card-monash div[role=main]>h2{
+background-color: var(--blue-emphasis); /* changes the lesson title bg color to blue */
+padding: 10px;
+color: var(--text-emphasis); /* changes the lesson title font color to white */
+}
+
+.card-monash div[role=main]>h3{
+	margin-left: 10px;
+	color: var(--text-blue);
+	font-family: Helvetica Neue !important;
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1.2;
+	margin-bottom: 2rem;
+	border-bottom: solid 1px #dddddd;
+	padding-bottom: 2rem;
+	padding-left: 10%;
+	padding-top: 2rem;
+}
+
+.card-monash div[role=main]>h2>a {
+	color: var(--text-emphasis)
+}
+
+.activity-navigation {
+	display: none; /* hides activity navigation bar on bottom of lesson - delete if desired */
+}
+
+.bg-light {
+  background-color: #e9e9e994 !important;
+}
+
+/*end of styles of Moodle lessons*/
+
+/*This styles elements while in single activity mode or in lessons, pages etc. */
+
+.h5p-iframe-wrapper {
+ 	max-width: 1400px /*sets a maximum width on h5p activities so that easier to view without scrolling down*/
+}
+
+.mediaplugin > div {
+	max-width: 580px !important; /*makes videos embedded directly larger, default is too small to be useful*/
+}
+
+.book_content h3:first-child { /*style page titles in Books*/
+	color: var(--text-blue);
+	font-family: Helvetica Neue !important;
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1.2;
+	margin-bottom: 2rem;
+	border-bottom: solid 1px #dddddd;
+	padding-bottom: 2rem;
+}
+
+.box.py-3.contents, .box.py-3.generalbox.book_content, .box.py-3.generalbox.center.clearfix, .box.py-3.branchbuttoncontainer.horizontal { /*centers content in books, lessons and pages*/
+	padding-left:10%;
+	padding-right:10%;
+	max-width: 1400px;
+}
+
+.box.py-3.contents div:not(.embed-responsive)>iframe[src*="panopto"], .box.py-3.generalbox.book_content div:not(.embed-responsive)>iframe[src*="panopto"], .box.py-3.generalbox.center.clearfix div:not(.embed-responsive)>iframe[src*="panopto"] { /* make videos in lessons, books and pages larger and more responsive */
+   		 width: 70% !important;
+         	height: 23vw;
+}
+
+.box.py-3.contents p>iframe[src*="panopto"], .box.py-3.generalbox.book_content p>iframe[src*="panopto"], .box.py-3.generalbox.center.clearfix p>iframe[src*="panopto"] {
+  		 width: 70% !important;
+         	height: 23vw;
+}
+
+#intro, #pageintro { /*styles activity descriptions in single activities*/
+	background-color: var(--BG3);
+	padding: 0 15px;
+}
+
+/*This styles the back to top button */
+
+#goto-top-link .icon{ /* Style back to top button size */
+	font-size: 40px;
+	width: 70px;
+	height: 45px;
+}
+
+#goto-top-link .btn-light{ /* Style back to top button colour, shape */
+	background-color: #db7c00f0;
+	border-color: none;
+	border-radius: 5px 0 0 5px;
+	color: #ffffff;
+}
+
+/*This styles the accordion in overview page*/
+.acctab > input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.acc .row {
+  display: flex;
+}
+.acc .row .acc .col {
+  flex: 1;
+}
+.acc .row .acc .col:last-child {
+  margin-left: 1em;
+}
+
+.accordion {
+  overflow: hidden;
+}
+
+.acctab {
+  width: 100%;
+  color: var(--text-norm);
+  overflow: hidden;
+}
+.acctab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6em 1em;
+  margin:4px 0 0 0;
+  background: var(--BG3);
+  cursor: pointer;
+  margin-bottom: 0 !important;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+.acctab-label:hover {
+  background: var(--BG3);
+  filter: brightness(90%);
+}
+.acctab-label::after { /* Icon */
+  display: inline-block;
+  padding-left: 6px;
+  padding-right: 8px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 0.8em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: "\f138";
+  text-align: center;
+  transition: all 0.35s;
+}
+.acctab-content {
+  max-height: 0;
+  padding: 0 1em;
+	background-color: var(--BG2);
+	color: var(--text-norm);
+  transition: all 0.35s;
+}
+.acctab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: var(--blue-emphasis);
+  cursor: pointer;
+}
+.acctab-close:hover {
+  background: var(--blue-emphasis);
+}
+
+input:checked + .acctab-label {
+  background-color: var(--blue-emphasis) !important;
+	color: var(--text-emphasis) !important;
+}
+input:checked + .acctab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .acctab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+  
+.acctab td{
+background-color: var(--BG2)
+}
+
+
+
+
+/* Changes color of links on entire site to match theme */
+a {
+color: var(--link-color)
+}
+
+/*This styles the optional teaching staff details block */
+
+.profileimg {
+max-width: 80px !important;
+   height: auto !important;
+border-radius: 15px;
+}
+
+.profileimgcon {
+float: right;
+margin-left: 2px;
+margin-bottom: 5px;
+}
+
+.profilebox span{
+text-align: left;
+border-radius: 10px;
+padding: 2px 10px; 
+background-color: var(--BG3);
+font-color: var(--text-norm);
+font-size: 13px;
+font-weight: bold;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.profileimgcon>img.img-responsive.atto_image_button_text-bottom, .profileimgcon>img.atto_image_button_text-bottom{
+	max-width: 80px !important;
+   	height: auto !important;
+	border-radius: 15px;
+	margin: 0;
+}
+
 /*Hides and disables option in Settings that allows adding or removing sections */
 select#id_numsections{
 	display:none
