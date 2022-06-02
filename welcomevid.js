@@ -21,7 +21,7 @@ window.addEventListener('load',function(){
         video.outerHTML=videoURL;
       
       var uSyntab = document.querySelectorAll(".acctab-content p")[0];
-      var uSynNew = document.getElementById("US").value;
+      var uSynNew = document.getElementById("USny").value;
       console.log(uSyntab);
         uSyntab.innerHTML=uSynNew;
       
