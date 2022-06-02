@@ -1,6 +1,9 @@
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
-	   
+	
+	var btnUpload = document.querySelectorAll("button#upload");
+	btnUpload.addEventListener("click", getURL);
+	
 	function getURL() {
       var video = document.querySelectorAll(".embed-responsive-16by9 iframe")[0];
       var videoURL = document.getElementById("url").value;
