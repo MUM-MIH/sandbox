@@ -14,7 +14,7 @@ window.addEventListener('load',function(){
 				  }
     }
 
-  
+  });
     function getURL() {
       var video = document.querySelectorAll(".embed-responsive-16by9 iframe")[0];
       var videoURL = document.getElementById("url").value;
