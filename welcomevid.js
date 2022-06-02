@@ -1,6 +1,6 @@
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
-	 $("#mainEditor").focus();
+	 $("#id_introeditoreditable").focus();
 //make a variable of the breadcrumbs 
 	var Edit=$('li.breadcrumb-item').text();
   
