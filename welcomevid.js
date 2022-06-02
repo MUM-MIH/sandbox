@@ -1,4 +1,7 @@
-//make a variable of the breadcrumbs 
+// directs the function to work once the page has loaded.
+window.addEventListener('load',function(){
+	
+	//make a variable of the breadcrumbs 
 	var Edit=$('li.breadcrumb-item').text();
   
   //check if hidden overview exists  
@@ -38,3 +41,5 @@
       console.log(Contab);
         Contab.innerHTML=ConNew;
     }
+//Close window.onload function	
+	});
