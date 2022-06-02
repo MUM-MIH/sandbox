@@ -16,10 +16,10 @@ window.addEventListener('load',function(){
   var btn = document.getElementById("Upload");
 	btn.addEventListener("click", getURL);
 	function getURL() {
-      var video = document.querySelectorAll(".embed-responsive-16by9 iframe")[0];
+      var video = document.querySelectorAll(".embed-responsive-16by9")[0];
       var videoURL = document.getElementById("url").value;
       console.log(videoURL);
-        video.outerHTML=videoURL;
+        video.innerHTML=videoURL;
       
       var uSyntab = document.querySelectorAll(".acctab-content p")[0];
       var uSynNew = document.getElementById("USny").value;
