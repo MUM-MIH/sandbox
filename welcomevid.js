@@ -42,7 +42,8 @@ window.addEventListener('load',function(){
       console.log(Contab);
         Contab.innerHTML=ConNew;
 		
+		$("#id_introeditoreditable").focus();
 	}
-	$("#id_introeditoreditable").focus();
+	
 	//Close window.onload function	
 	});
