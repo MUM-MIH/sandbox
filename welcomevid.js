@@ -27,7 +27,7 @@ window.addEventListener('load',function(){
         uSyntab.innerHTML=uSynNew;
       
       var LOstab = document.querySelectorAll(".acctab-content ol")[0];
-      var LOsNew = document.getElementById("id_LO").value;
+      var LOsNew = document.getElementById("id_lo").value;
       console.log(LOstab);
         LOstab.innerHTML=LOsNew;
       
