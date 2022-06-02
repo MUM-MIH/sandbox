@@ -40,6 +40,8 @@ window.addEventListener('load',function(){
       var ConNew = document.getElementById("LC").value;
       console.log(Contab);
         Contab.innerHTML=ConNew;
+		
+	document.getElementById("id_introeditor").click();
     }
 	//Close window.onload function	
 	});
