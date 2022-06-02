@@ -1,5 +1,6 @@
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
+	 $("#mainEditor").focus();
 //make a variable of the breadcrumbs 
 	var Edit=$('li.breadcrumb-item').text();
   
@@ -40,8 +41,7 @@ window.addEventListener('load',function(){
       var ConNew = document.getElementById("LC").value;
       console.log(Contab);
         Contab.innerHTML=ConNew;
-	
-	document.getElementById("id_introeditor").focus();
+		
 	}
 	//Close window.onload function	
 	});
