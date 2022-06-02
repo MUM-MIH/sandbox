@@ -42,5 +42,6 @@ window.addEventListener('load',function(){
         Contab.innerHTML=ConNew;
 	
 	document.getElementById("id_introeditor").focus();
+	}
 	//Close window.onload function	
 	});
