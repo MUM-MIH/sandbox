@@ -40,14 +40,10 @@ if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
       {
       return false
       }
-     else
+    if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
       {
-       Nametab.innerHTML=NameNew;
-       LOstab.innerHTML=LOsNew;
-       video.innerHTML=videoURL;
-       uSyntab.innerHTML=uSynNew;
-       Contab.innerHTML=ConNew;
-      }
+      video.innerHTML=videoURL;
+      }  
 		$("#id_introeditoreditable").focus();
 	}
 	
