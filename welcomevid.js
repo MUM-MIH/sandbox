@@ -37,50 +37,7 @@ window.addEventListener('load',function(){
       {
       return false
       } 
-      else if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
-      {
-       Nametab.innerHTML=NameNew;
-       LOstab.innerHTML=LOsNew;
-       uSyntab.innerHTML=uSynNew;
-       Contab.innerHTML=ConNew;
-      }        
-      else if( videoURL == ""|| LOsNew ==""|| NameNew =="" || ConNew =="")
-      {
-	Nametab.innerHTML=NameNew;
-       LOstab.innerHTML=LOsNew;
-       video.innerHTML=videoURL;
-       Contab.innerHTML=ConNew;      
-      }
-      else if(videoURL == ""|| uSynNew =="" || NameNew =="" || ConNew =="")
-      {
-       Nametab.innerHTML=NameNew;
-       video.innerHTML=videoURL;
-       uSyntab.innerHTML=uSynNew;
-       Contab.innerHTML=ConNew;    
-      }     
-      else if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| ConNew =="")
-      {
-       LOstab.innerHTML=LOsNew;
-       video.innerHTML=videoURL;
-       uSyntab.innerHTML=uSynNew;
-       Contab.innerHTML=ConNew;  
-      }
-      else if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="")      
-      {
-       Nametab.innerHTML=NameNew;
-       LOstab.innerHTML=LOsNew;
-       video.innerHTML=videoURL;
-       uSyntab.innerHTML=uSynNew;
-            
-      }
-      else
-      {
-       Nametab.innerHTML=NameNew;
-       LOstab.innerHTML=LOsNew;
-       video.innerHTML=videoURL;
-       uSyntab.innerHTML=uSynNew;
-       Contab.innerHTML=ConNew;
-      }	
+    
 	$("#id_introeditoreditable").focus();
 	}
 	
