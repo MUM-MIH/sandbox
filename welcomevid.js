@@ -38,13 +38,14 @@ window.addEventListener('load',function(){
  
 if( videoURL == ""&& uSynNew =="" && LOsNew ==""&& NameNew =="" && ConNew =="")
       {
-     
+     $("#id_introeditoreditable").focus();
       }
     if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
       {
       video.innerHTML=videoURL;
+$("#id_introeditoreditable").focus();
       }  
-		$("#id_introeditoreditable").focus();
+		
 	}
 	
 	//Close window.onload function	
