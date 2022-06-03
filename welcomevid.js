@@ -39,7 +39,15 @@ window.addEventListener('load',function(){
 if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
       {
       return false
-      } 	
+      }
+     else
+      {
+       Nametab.innerHTML=NameNew;
+       LOstab.innerHTML=LOsNew;
+       video.innerHTML=videoURL;
+       uSyntab.innerHTML=uSynNew;
+       Contab.innerHTML=ConNew;
+      }
 		$("#id_introeditoreditable").focus();
 	}
 	
