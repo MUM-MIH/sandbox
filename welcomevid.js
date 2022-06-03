@@ -36,16 +36,44 @@ window.addEventListener('load',function(){
       var Contab = document.querySelectorAll(".acctab-content p")[2];
       var ConNew = document.getElementById("LC").value;
  
-if( videoURL == ""&& uSynNew =="" && LOsNew ==""&& NameNew =="" && ConNew =="")
+    if( videoURL == ""&& uSynNew =="" && LOsNew ==""&& NameNew =="" && ConNew =="")
       {
      $("#id_introeditoreditable").focus();
       }
     if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
       {
       video.innerHTML=videoURL;
-$("#id_introeditoreditable").focus();
+      $("#id_introeditoreditable").focus();
       }  
-		
+     if( videoURL == ""|| LOsNew ==""|| NameNew =="" || ConNew =="")
+      {
+	 uSyntab.innerHTML=uSynNew; 
+	 $("#id_introeditoreditable").focus();
+      }
+      if(videoURL == ""|| uSynNew =="" || NameNew =="" || ConNew =="")
+      {
+       LOstab.innerHTML=LOsNew; 
+       $("#id_introeditoreditable").focus();
+      }     
+      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| ConNew =="")
+      {
+       Nametab.innerHTML=NameNew;
+       $("#id_introeditoreditable").focus();
+      }
+      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="")      
+      {
+      Contab.innerHTML=ConNew;
+      $("#id_introeditoreditable").focus();      
+      }
+      else
+      {
+       Nametab.innerHTML=NameNew;
+       LOstab.innerHTML=LOsNew;
+       video.innerHTML=videoURL;
+       uSyntab.innerHTML=uSynNew;
+       Contab.innerHTML=ConNew;
+       $("#id_introeditoreditable").focus();
+      }		
 	}
 	
 	//Close window.onload function	
