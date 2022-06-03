@@ -33,10 +33,7 @@ window.addEventListener('load',function(){
       var Contab = document.querySelectorAll(".acctab-content p")[2];
       var ConNew = document.getElementById("LC").value;
     
-      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
-      {
-      return false
-      } 
+    
     
 	$("#id_introeditoreditable").focus();
 	}
