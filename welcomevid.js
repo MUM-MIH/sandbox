@@ -40,7 +40,7 @@ window.addEventListener('load',function(){
       {
      $("#id_introeditoreditable").focus();
       }
-   else 
+   if  ( videoURL !="" && uSynNew !="" && LOsNew !="" && NameNew !="" && ConNew !="") //all fields are not empty
       {
        Nametab.innerHTML=NameNew;
        LOstab.innerHTML=LOsNew;
