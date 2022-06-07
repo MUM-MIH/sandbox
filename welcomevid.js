@@ -36,36 +36,36 @@ window.addEventListener('load',function(){
       var Contab = document.querySelectorAll(".acctab-content p")[2];
       var ConNew = document.getElementById("LC").value;
  
-    if( videoURL =="" && uSynNew =="" && LOsNew =="" && NameNew =="" && ConNew =="")
+    if( videoURL =="" && uSynNew =="" && LOsNew =="" && NameNew =="" && ConNew =="") //all fields are empty
       {
      $("#id_introeditoreditable").focus();
       }
-    if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="")
+    if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="") //video URL is empty
       {
       video.innerHTML=videoURL;
       $("#id_introeditoreditable").focus();
       }  
-     if( videoURL == ""|| LOsNew ==""|| NameNew =="" || ConNew =="")
+     if( videoURL == ""|| LOsNew ==""|| NameNew =="" || ConNew =="") //Synopsis is empty
       {
 	 uSyntab.innerHTML=uSynNew; 
 	 $("#id_introeditoreditable").focus();
       }
-      if(videoURL == ""|| uSynNew =="" || NameNew =="" || ConNew =="")
+      if(videoURL == ""|| uSynNew =="" || NameNew =="" || ConNew =="") // LO is empty
       {
        LOstab.innerHTML=LOsNew; 
        $("#id_introeditoreditable").focus();
       }     
-      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| ConNew =="")
+      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| ConNew =="") // Lecturer name is empty
       {
        Nametab.innerHTML=NameNew;
        $("#id_introeditoreditable").focus();
       }
-      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="")      
+      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="") // Lecturer contact is empty
       {
       Contab.innerHTML=ConNew;
       $("#id_introeditoreditable").focus();      
       }
-      else
+      else  // all fields are not empty
       {
        Nametab.innerHTML=NameNew;
        LOstab.innerHTML=LOsNew;
