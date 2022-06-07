@@ -40,6 +40,16 @@ window.addEventListener('load',function(){
       {
      $("#id_introeditoreditable").focus();
       }
+   else 
+      {
+       Nametab.innerHTML=NameNew;
+       LOstab.innerHTML=LOsNew;
+       video.innerHTML=videoURL;
+       uSyntab.innerHTML=uSynNew;
+       Contab.innerHTML=ConNew;
+       $("#id_introeditoreditable").focus();
+      }	
+		
     if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="") //video URL is empty
       {
       video.innerHTML=videoURL;
@@ -65,15 +75,7 @@ window.addEventListener('load',function(){
       Contab.innerHTML=ConNew;
       $("#id_introeditoreditable").focus();      
       }
-      else  // all fields are not empty
-      {
-       Nametab.innerHTML=NameNew;
-       LOstab.innerHTML=LOsNew;
-       video.innerHTML=videoURL;
-       uSyntab.innerHTML=uSynNew;
-       Contab.innerHTML=ConNew;
-       $("#id_introeditoreditable").focus();
-      }		
+  	
 	}
 	
 	//Close window.onload function	
