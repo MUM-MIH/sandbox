@@ -15,26 +15,27 @@ window.addEventListener('load',function(){
     }
 	
   var btn = document.getElementById("Upload");
-	btn.addEventListener("click", getURL);
-	function getURL() {
+  btn.addEventListener("click", getURL);
+	
+function getURL() {
       var video = document.querySelectorAll(".embed-responsive-16by9")[0];
       var videoURL = document.getElementById("url").value;
    
       
       var uSyntab = document.querySelectorAll(".acctab-content p")[0];
-      var uSynNew = document.getElementById("USny").value;
+      var uSynNew = document.getElementById("USny").value.trim();
       
       
       var LOstab = document.querySelectorAll(".acctab-content ol")[0];
-      var LOsNew = document.getElementById("id_lo").value;
+      var LOsNew = document.getElementById("id_lo").value.trim();
     
       
       var Nametab = document.querySelectorAll(".acctab-content h6")[0];
-      var NameNew = document.getElementById("Lname").value;
+      var NameNew = document.getElementById("Lname").value.trim();
       
       
       var Contab = document.querySelectorAll(".acctab-content p")[2];
-      var ConNew = document.getElementById("LC").value;
+      var ConNew = document.getElementById("LC").value.trim();
  
     if( videoURL =="" && uSynNew =="" && LOsNew =="" && NameNew =="" && ConNew =="") //all fields are empty
       {
@@ -50,27 +51,27 @@ window.addEventListener('load',function(){
        $("#id_introeditoreditable").focus();
       }	
 		
-    if(uSynNew =="" || LOsNew ==""|| NameNew =="" || ConNew =="") //video URL is empty
+    if(videoURL !="")//video URL is empty
       {
       video.innerHTML=videoURL;
       $("#id_introeditoreditable").focus();
       }  
-     if( videoURL == ""|| LOsNew ==""|| NameNew =="" || ConNew =="") //Synopsis is empty
+     if( uSynNew != "") //Synopsis is empty
       {
 	 uSyntab.innerHTML=uSynNew; 
 	 $("#id_introeditoreditable").focus();
       }
-      if(videoURL == ""|| uSynNew =="" || NameNew =="" || ConNew =="") // LO is empty
+      if(LOsNew != "") // LO is empty
       {
        LOstab.innerHTML=LOsNew; 
        $("#id_introeditoreditable").focus();
       }     
-      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| ConNew =="") // Lecturer name is empty
+      if( NameNew != "") // Lecturer name is empty
       {
        Nametab.innerHTML=NameNew;
        $("#id_introeditoreditable").focus();
       }
-      if( videoURL == ""|| uSynNew =="" || LOsNew ==""|| NameNew =="") // Lecturer contact is empty
+      if( ConNew != "") // Lecturer contact is empty
       {
       Contab.innerHTML=ConNew;
       $("#id_introeditoreditable").focus();      
