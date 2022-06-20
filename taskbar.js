@@ -4,32 +4,8 @@ window.addEventListener('load',function(){
 //make a variable of the breadcrumbs 
 	var Edit=$('li.breadcrumb-item').text();
   
-//check if hidden overview exists  
-  var taskbar = document.getElementById("taskbar");
-
-//check if edit settings page and if hidden overview element exists
-    if (Edit.match(/Edit settings/)){      
-      if(taskbar){
-        $('#id_generalhdr').before('// directs the function to work once the page has loaded.
-window.addEventListener('load',function(){
-	 
-//make a variable of the breadcrumbs 
-	var Edit=$('li.breadcrumb-item').text();
-  
-//check if hidden overview exists  
-  var taskbar = document.getElementById("taskbar");
-
-//check if edit settings page and if hidden overview element exists
-    if (Edit.match(/Edit settings/)){      
-      if(taskbar){
-        $('#id_generalhdr').before('// directs the function to work once the page has loaded.
-window.addEventListener('load',function(){
-	 
-//make a variable of the breadcrumbs 
-	var Edit=$('li.breadcrumb-item').text();
-  
-//check if hidden overview exists  
-  var taskbar = document.getElementById("taskbar");
+//check if taskbar exists  
+  var taskbar = document.getElementById("taskbar");	 
 
 //check if edit settings page and if hidden overview element exists
     if (Edit.match(/Edit settings/)){      
