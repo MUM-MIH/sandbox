@@ -13,8 +13,8 @@ window.addEventListener('load',function(){
         $('#id_generalhdr').after('<fieldset class="clearfix collapsible" id="taskpicker"> <legend class="ftoggler"><a href="#" class="fheader" role="button" aria-controls="id_modstandardelshdr" aria-expanded="true">Taskbar Editor</a></legend> <button id="addtask">Add task</button> <div id="taskoption"> <div id="taskdrop" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible"> Icon </label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"> <select class="custom-select" name="visible" id="id_visible"> <option value="1" selected="">Play video</option> <option value="2">Book</option> <option value="3">Speech bubble</option> <option value="4">Pre-class symbol</option> </select> </div> </div> </div> </fieldset> <br> <button id="change">Create taskbar</button>')
 				  }
     }
-  var btn = document.getElementById("addtask");
-btn.addEventListener("click", textBoxCreate);
+  var btnAddTask = document.getElementById("addtask");
+btnAddTask.addEventListener("click", textBoxCreate);
 var i = 0;
 function textBoxCreate() {
   //Create and append select list 
