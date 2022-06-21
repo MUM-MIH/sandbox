@@ -84,6 +84,7 @@ function changeicon() {
      }
         
 }
+	$("#id_introeditoreditable").focus(); 
 }
 //}
 	//Close window.onload function	
