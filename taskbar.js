@@ -1,8 +1,8 @@
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
 
-var btnAddTask = document.getElementById("addtask");
-btnAddTask.addEventListener("click", textBoxCreate);
+//var btnAddTask = document.getElementById("addtask");
+//btnAddTask.addEventListener("click", textBoxCreate);
 	
 var btnchange = document.getElementById("change");
 btnchange.addEventListener("click", createTable);
