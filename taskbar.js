@@ -4,10 +4,10 @@ window.addEventListener('load',function(){
 //var btnAddTask = document.getElementById("addtask");
 //btnAddTask.addEventListener("click", textBoxCreate);
 	
-var btnchange = document.getElementById("change");
-btnchange.addEventListener("click", createTable);
+//var btnchange = document.getElementById("change");
+//btnchange.addEventListener("click", createTable);
 	
-var i = 0;
+//var i = 0;
 	
 //make a variable of the breadcrumbs 
 	var Edit=$('li.breadcrumb-item').text();
@@ -18,10 +18,13 @@ var i = 0;
 //check if edit settings page and if hidden overview element exists
     if (Edit.match(/Edit settings/)){      
       if(taskbar){
-        $('#id_generalhdr').after('<fieldset class="clearfix collapsible" id="taskpicker"> <legend class="ftoggler"><a href="#" class="fheader" role="button" aria-controls="id_modstandardelshdr" aria-expanded="true">Taskbar Editor</a></legend> <button id="addtask">Add task</button> <div id="taskoption"> <div id="taskdrop" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible"> Icon </label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"> <select class="custom-select" name="visible" id="id_visible"> <option value="1" selected="">Play video</option> <option value="2">Book</option> <option value="3">Speech bubble</option> <option value="4">Pre-class symbol</option> </select> </div> </div> </div> </fieldset> <br> <button id="change">Create taskbar</button>')
+        $('#id_generalhdr').after('<fieldset class="clearfix collapsible" id="taskpicker"> <legend class="ftoggler" id="yui_3_17_2_1_1655205039382_698"><a href="#" class="fheader" role="button" aria-controls="id_modstandardelshdr" aria-expanded="true">Common module settings</a></legend> <button type="button" class="btn btn-primary" id="addtask">Add task</button> <div id="taskcontainer"> <div id="taskoption"> <div id="taskdrop" class="form-group row fitem "> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible"> Icon </label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"> <select class="custom-select" name="visible" id="id_visible"> <option value="1" selected="">Play video</option> <option value="2">Book</option> <option value="3">Speech bubble</option> <option value="4">Pre-class symbol</option> </select> </div> </div> </div> </fieldset> <br> <button type="button" class="btn btn-primary" id="changetaskbar">Create taskbar</button>')
 				  }
     }
 
+var btn = document.getElementById("addtask");
+btn.addEventListener("click", textBoxCreate);
+var i = 0;
 function textBoxCreate() {
   //Create and append select list 
 
@@ -30,10 +33,12 @@ function textBoxCreate() {
   i++;
   clone.id = "taskoption" + i;
   document.getElementById("taskpicker").appendChild(clone);
-   
+  
+ 
 }
 
-
+var btnchange = document.getElementById("changetaskbar");
+btnchange.addEventListener("click", createTable);
 
 function createTable() {
 
@@ -79,6 +84,7 @@ function changeicon() {
      table.rows[1].cells[i].innerHTML="Pre Class Activity"; 
      }
         
+}
 }
 //}
 	//Close window.onload function	
