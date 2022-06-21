@@ -44,7 +44,6 @@ function createTable() {
 
   var num_rowz = 2;
   var num_cols = document.querySelectorAll("#taskdrop").length;
-  var theader = '<table id="newtable" border="1">\n';
   var tbody = "";
   for (var i = 0; i < num_rowz; i++) {
     tbody += "<tr>";
@@ -55,14 +54,14 @@ function createTable() {
     tbody += "</tr>\n";
   }
   var tfooter = "</table>";
-  document.getElementById("taskbar").innerHTML = theader + tbody + tfooter;
+  document.getElementById("taskbar").innerHTML = tbody + tfooter;
   changeicon();
 }
 
 function changeicon() {
 
   var num_cols = document.querySelectorAll("#taskdrop").length;
-  var table = document.getElementById("newtable");
+  var table = document.getElementById("taskbar");
  	var selectedValue;
     for (var i = 0; i<num_cols; i++) { //iterate trough rows
       selectedValue = document.querySelectorAll("#taskdrop select")[i].value;
