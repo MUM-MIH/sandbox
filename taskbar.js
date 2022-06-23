@@ -35,7 +35,7 @@ function textBoxCreate() {
   document.getElementById("taskpicker").appendChild(clone);
 }
 
-var btnchange = document.getElementById("change");
+var btnchange = document.getElementById("changetaskbar");
 btnchange.addEventListener("click", createTable);
 
 function createTable() {
