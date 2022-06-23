@@ -153,7 +153,7 @@ if (i == num_cols - 1 || num_cols == 1) {
         table.rows[0].cells[i + i].innerHTML = "[fa-refresh fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Check your knowledge";
-      } else if (selectedValue == "11" {
+      } else if (selectedValue == "11") {
         table.rows[0].cells[i + i].innerHTML = "[fa-users fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Tutorial";
@@ -165,7 +165,7 @@ if (i == num_cols - 1 || num_cols == 1) {
        table.rows[0].cells[i + i].innerHTML = "[fa-flask fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
          table.rows[1].cells[i + i].innerHTML = "Laboratory";
-      } else if (selectedValue == "14" {
+      } else if (selectedValue == "14") {
         table.rows[0].cells[i + i].innerHTML = "[fa-podcast fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Forum";
