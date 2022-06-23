@@ -134,7 +134,7 @@ if (i == num_cols - 1 || num_cols == 1) {
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Read";
       } else if (selectedValue == "6") {
-        able.rows[0].cells[i + i].innerHTML = "[fa-comments fa-2x]";
+        table.rows[0].cells[i + i].innerHTML = "[fa-comments fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Discuss";
       } else if (selectedValue == "7") {
@@ -160,7 +160,7 @@ if (i == num_cols - 1 || num_cols == 1) {
       } else if (selectedValue == "12") {
         table.rows[0].cells[i + i].innerHTML = "[fa-cogs fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
-       able.rows[1].cells[i + i].innerHTML = "Practical";
+       	table.rows[1].cells[i + i].innerHTML = "Practical";
       } else if (selectedValue == "13") {
        table.rows[0].cells[i + i].innerHTML = "[fa-flask fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
