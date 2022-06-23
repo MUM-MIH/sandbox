@@ -116,15 +116,15 @@ if (i == num_cols - 1 || num_cols == 1) {
       if (selectedValue == "1") {
         table.rows[0].cells[i + i].innerHTML = "[fa-hourglass-start fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
-        table.rows[1].cells[i + i].innerHTML = "Pre-class activities";
+        table.rows[1].cells[i + i].innerHTML = "Pre-class<br>\nactivities";
       } else if (selectedValue == "2") {
         table.rows[0].cells[i + i].innerHTML = "[fa-forward fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
-        table.rows[1].cells[i + i].innerHTML = "In-class activities";
+        table.rows[1].cells[i + i].innerHTML = "In-class<br>\nactivities";
       } else if (selectedValue == "3") {
         table.rows[0].cells[i + i].innerHTML = "[fa-hourglass-end fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
-        table.rows[1].cells[i + i].innerHTML = "Post-class activities";
+        table.rows[1].cells[i + i].innerHTML = "Post-class<br>\nactivities";
       } else if (selectedValue == "4") {
         table.rows[0].cells[i + i].innerHTML = "[fa-play fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
@@ -152,7 +152,7 @@ if (i == num_cols - 1 || num_cols == 1) {
       } else if (selectedValue == "10") {
         table.rows[0].cells[i + i].innerHTML = "[fa-refresh fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
-        table.rows[1].cells[i + i].innerHTML = "Check your knowledge";
+        table.rows[1].cells[i + i].innerHTML = "Check your<br>\nknowledge";
       } else if (selectedValue == "11") {
         table.rows[0].cells[i + i].innerHTML = "[fa-users fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
