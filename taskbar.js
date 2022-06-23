@@ -46,7 +46,7 @@ function createTable() {
   for (var i = 0; i < num_rowz; i++) {
     tbody += "<tr>";
     for (var j = 0; j < num_cols; j++) {
-      tbody += "<td>";
+      tbody += "<td class="newtask">";
       tbody += "</td>";
     }
     tbody += "</tr>\n";
