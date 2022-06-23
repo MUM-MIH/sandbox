@@ -133,7 +133,7 @@ if (i == num_cols - 1 || num_cols == 1) {
         table.rows[0].cells[i + i].innerHTML = "[fa-book fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Read";
-      } else if (selectedValue == "6" {
+      } else if (selectedValue == "6") {
         able.rows[0].cells[i + i].innerHTML = "[fa-comments fa-2x]";
         table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
         table.rows[1].cells[i + i].innerHTML = "Discuss";
