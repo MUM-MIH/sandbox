@@ -26,24 +26,22 @@ var btn = document.getElementById("addtask");
 btn.addEventListener("click", textBoxCreate);
 var i = 0;
 function textBoxCreate() {
-  //Create and append select list 
+  //Create and append select list
 
   var taskoption = document.getElementById("taskoption");
   var clone = taskoption.cloneNode(true);
   i++;
   clone.id = "taskoption" + i;
   document.getElementById("taskpicker").appendChild(clone);
-  
- 
 }
 
-var btnchange = document.getElementById("changetaskbar");
+var btnchange = document.getElementById("change");
 btnchange.addEventListener("click", createTable);
 
 function createTable() {
-
   var num_rowz = 2;
-  var num_cols = document.querySelectorAll("#taskdrop").length;
+  var num_cols = 14;
+  //var num_cols = document.querySelectorAll("#taskdrop").length;
   var tbody = "";
   for (var i = 0; i < num_rowz; i++) {
     tbody += "<tr>";
@@ -59,32 +57,52 @@ function createTable() {
 }
 
 function changeicon() {
-
   var num_cols = document.querySelectorAll("#taskdrop").length;
+  //var num_cols =12;
   var table = document.getElementById("taskbar");
- 	var selectedValue;
-    for (var i = 0; i<num_cols; i++) { //iterate trough rows
-      selectedValue = document.querySelectorAll("#taskdrop select")[i].value;
-      
-      if(selectedValue=="1"){    
-     table.rows[0].cells[i].innerHTML="[fa-play-circle fa-2x]";
-     table.rows[1].cells[i].innerHTML="Watch";
-       }  
-      else if(selectedValue=="2"){    
-     table.rows[0].cells[i].innerHTML="[fa-book fa-2x]";
-     table.rows[1].cells[i].innerHTML="Read";
-       } 
-      else if(selectedValue=="3"){    
-     table.rows[0].cells[i].innerHTML="[fa-comments fa-2x]";
-     table.rows[1].cells[i].innerHTML="Discuss"; 
+  var selectedValue;
+  for (var i = 0; i < num_cols; i++) {
+    //iterate trough rows
+    selectedValue = document.querySelectorAll("#taskdrop select")[i].value;
+
+    if (i == num_cols - 1 || num_cols == 1) {
+      if (selectedValue == "1") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-play-circle fa-2x]";
+        table.rows[1].cells[i + i].innerHTML = "Watch";
+      } else if (selectedValue == "2") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-book fa-2x]";
+
+        table.rows[1].cells[i + i].innerHTML = "Read";
+      } else if (selectedValue == "3") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-comments fa-2x]";
+
+        table.rows[1].cells[i + i].innerHTML = "Discuss";
+      } else if (selectedValue == "4") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-bug fa-2x]";
+
+        table.rows[1].cells[i + i].innerHTML = "Pre Class Activity";
       }
-      else if(selectedValue=="4"){    
-     table.rows[0].cells[i].innerHTML="[fa-bug fa-2x]";
-     table.rows[1].cells[i].innerHTML="Pre Class Activity"; 
-     }
-        
-}
-	$("#id_introeditoreditable").focus(); 
+    } else {
+      if (selectedValue == "1") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-play-circle fa-2x]";
+        table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
+        table.rows[1].cells[i + i].innerHTML = "Watch";
+      } else if (selectedValue == "2") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-book fa-2x]";
+        table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
+        table.rows[1].cells[i + i].innerHTML = "Read";
+      } else if (selectedValue == "3") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-comments fa-2x]";
+        table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
+        table.rows[1].cells[i + i].innerHTML = "Discuss";
+      } else if (selectedValue == "4") {
+        table.rows[0].cells[i + i].innerHTML = "[fa-bug fa-2x]";
+        table.rows[1].cells[i + i + 1].innerHTML = "[fa-angle-double-right]";
+        table.rows[1].cells[i + i].innerHTML = "Pre Class Activity";
+      }
+    }
+  }
+	$("#id_introeditoreditable").focus();
 }
 //}
 	//Close window.onload function	
