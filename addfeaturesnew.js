@@ -171,7 +171,7 @@ window.addEventListener("load", function () {
         var clone = taskoption.cloneNode(true);
         i++;
         clone.id = "taskoption" + i;
-        document.getElementById("taskpicker").appendChild(clone);
+        document.getElementById("taskcontainer").appendChild(clone);
       }
 
       var btnChange = document.getElementById("changetaskbar");
