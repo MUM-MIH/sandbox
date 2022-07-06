@@ -90,6 +90,8 @@ window.addEventListener("load", function () {
   var hiddenoverview = document.getElementById("hiddenoverview");
   //check if taskbar exists
   var taskbar = document.getElementById("taskbar");
+  //check if header exists
+  var taskhead = document.querySelectorAll(".circleiconw");
 
   //check if edit settings page and if hidden overview element or taskbar exists
   if (SchoolSpecific.match(/Edit settings/)) {
@@ -339,6 +341,66 @@ window.addEventListener("load", function () {
         }
         $("#id_introeditoreditable").focus();
       }
+    } else if (taskhead) {
+      $("#id_generalhdr").before(
+        '<fieldset class="clearfix collapsible" id="taskpicker"> <legend class="ftoggler"><a href="#" class="fheader" role="button" aria-controls="id_modstandardelshdr" aria-expanded="true">Header editor (beta)</a></legend> <div class="editinfobox"> <p>Use this editor to edit the header. Choose a header from the dropdown menu then <b>click \'Update header\'</b>. Finally, scroll to the bottom of this page and click \'Save and return to unit\'.</p> </div> <div id="taskcontainer"> <div id="taskoption"> <div id="taskdrop" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible">Header</label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"> <select class="custom-select" name="visible" id="id_visible"> <option value="1" selected="">Pre-class</option> <option value="2">In-class</option> <option value="3">Post-class</option> <option value="4"="">Watch</option> <option value="5">Read</option> <option value="6">Discuss</option> <option value="7">Complete</option> <option value="8">Reflect</option> <option value="9">Try</option> <option value="10">Knowledge Check</option> <option value="11">Tutorial</option> <option value="12">Practical</option> <option value="13">Laboratory</option> <option value="14">Forum</option> <option value="15">Workshop</option> </select> </div> </div> </div> </div> <div id="addtaskbutton" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible"> </label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"><button type="button" class="btn btn-primary" style="margin: 10px 5px" id="changeheader"><i class="icon fa fa-exclamation-triangle fa-fw " title="important note" aria-label="important note"></i>Update header</button> </div> </fieldset>'
+      );
+      var btnChangeHeader = document.getElementById("changeheader");
+btnChangeHeader.addEventListener("click", changeHeader);
+
+function changeHeader() {
+  var heading = document.querySelectorAll(".circleiconw")[0];
+  var headingDesc = document.querySelectorAll(".circleiconw + h2")[0];
+  var selectedValueA = document.querySelectorAll("#taskdrop select")[0].value;
+
+  if (selectedValueA == "1") {
+    heading.innerHTML = "[fa-hourglass-start fa-2x]";
+    headingDesc.innerHTML = "Pre-class activities";
+  } else if (selectedValueA == "2") {
+    heading.innerHTML = "[fa-forward fa-2x]";
+    headingDesc.innerHTML = "In-class activities";
+  } else if (selectedValueA == "3") {
+    heading.innerHTML = "[fa-hourglass-end fa-2x]";
+    headingDesc.innerHTML = "Post-class activities";
+  } else if (selectedValueA == "4") {
+    heading.innerHTML = "[fa-play fa-2x]";
+    headingDesc.innerHTML = "Watch";
+  } else if (selectedValueA == "5") {
+    heading.innerHTML = "[fa-book fa-2x]";
+    headingDesc.innerHTML = "Read";
+  } else if (selectedValueA == "6") {
+    heading.innerHTML = "[fa-comments fa-2x]";
+    headingDesc.innerHTML = "Discuss";
+  } else if (selectedValueA == "7") {
+    heading.innerHTML = "[fa-check-square fa-2x]";
+    headingDesc.innerHTML = "Complete";
+  } else if (selectedValueA == "8") {
+    heading.innerHTML = "[fa-coffee fa-2x]";
+    headingDesc.innerHTML = "Reflect";
+  } else if (selectedValueA == "9") {
+    heading.innerHTML = "[fa-puzzle-piece fa-2x]";
+    headingDesc.innerHTML = "Try";
+  } else if (selectedValueA == "10") {
+    heading.innerHTML = "[fa-refresh fa-2x]";
+    headingDesc.innerHTML = "Knowledge Check";
+  } else if (selectedValueA == "11") {
+    heading.innerHTML = "[fa-users fa-2x]";
+    headingDesc.innerHTML = "Tutorial";
+  } else if (selectedValueA == "12") {
+    heading.innerHTML = "[fa-cogs fa-2x]";
+    headingDesc.innerHTML = "Practical";
+  } else if (selectedValueA == "13") {
+    heading.innerHTML = "[fa-flask fa-2x]";
+    headingDesc.innerHTML = "Laboratory";
+  } else if (selectedValueA == "14") {
+    heading.innerHTML = "[fa-podcast fa-2x]";
+    headingDesc.innerHTML = "Forum";
+  } else if (selectedValueA == "15") {
+    heading.innerHTML = "[fa-wrench fa-2x]";
+    headingDesc.innerHTML = "Workshop";
+  }
+  $("#id_introeditoreditable").focus();
+}
     }
   }
 
