@@ -1,4 +1,4 @@
- //start of welcome video and taskbar editor
+   //start of welcome video and taskbar editor
   //check if hidden overview exists
   var hiddenoverview = document.getElementById("hiddenoverview");
   //check if taskbar exists
@@ -6,7 +6,7 @@
   //check if header exists
   var taskhead = document.querySelectorAll(".circleiconw")[0];
   //check if atto editor exists
-  var attoeditor = document.querySelectorAll("a.fheader")[0];
+  var attoeditor = document.getElementById("#id_generalhdr");
 
   //check if edit settings page and if hidden overview element or taskbar exists
   if (SchoolSpecific.match(/Edit settings|Adding a new Label/)) {
@@ -318,25 +318,30 @@
         $("#id_introeditoreditable").focus();
       }
     } else if (attoeditor) {
-      $("#id_generalhdr").after(
-        '<fieldset class="clearfix collapsible" id="templatepicker"> <legend class="ftoggler"><a href="#" class="fheader" role="button" aria-controls="id_modstandardelshdr" aria-expanded="true">Insert template (beta)</a></legend> <div class="editinfobox"> <p>Use this editor to insert a custom-built template. Choose a template from the dropdown menu then <b>click \'Insert template\'</b>. You can now edit the template with your media. Finally, scroll to the bottom of this page and click \'Save and return to unit\'.</p> </div> <div id="taskcontainer"> <div id="taskoption"> <div id="templatedrop" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible">Header</label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"> <select class="custom-select" name="visible" id="id_visible"> <option value="1" selected="">Video with text on the right</option> <option value="2">Text in a grey box</option> <option value="3">Divider line with text below</option> <option value="4"="">Grey box with image on right</option> </select> </div> </div> </div> </div> <div id="addtaskbutton" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible"> </label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"><button type="button" class="btn btn-primary" style="margin: 10px 5px" id="addtemplate"><i class="icon fa fa-exclamation-triangle fa-fw " title="important note" aria-label="important note"></i>Insert template</button> </div> </fieldset>'
+      $("#id_generalhdr").before(
+        '<fieldset class="clearfix collapsible" id="templatepicker"> <legend class="ftoggler"><a href="#" class="fheader" role="button" aria-controls="id_modstandardelshdr" aria-expanded="true">Insert template (beta)</a></legend> <div class="editinfobox"> <p>Use this editor to insert a custom-built template. Choose a template from the dropdown menu then <b>click \'Insert template\'</b>. You can now edit the template with your media. Finally, scroll to the bottom of this page and click \'Save and return to unit\'.</p> </div> <div id="taskcontainer"> <div id="taskoption"> <div id="templatedrop" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible">Header</label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"> <select class="custom-select" name="visible" id="id_visible"> <option value="1" selected="">Video with text on the right</option> <option value="2">Text in a grey box</option> <option value="3">Divider line with text below</option> <option value="4"="">Grey box with image on right</option> </select> </div> <div id="templatepreview" class="col-md-6 align-items-start">  </div></div> </div> </div> <div id="addtaskbutton" class="form-group row fitem"> <div class="col-md-3 col-form-label d-flex pb-0 pr-md-0"> <label class="d-inline word-break" for="id_visible"> </label> </div> <div class="col-md-9 form-inline align-items-start felement" data-fieldtype="modvisible"><button type="button" class="btn btn-primary" style="margin: 10px 5px" id="addtemplate"><i class="icon fa fa-exclamation-triangle fa-fw " title="important note" aria-label="important note"></i>Insert template</button> </div> </fieldset>'
       );
       var btnAddTemplate = document.getElementById("addtemplate");
       btnAddTemplate.addEventListener("click", addTemplate);
 
       function addTemplate() {
         var editorInput = document.getElementById("id_introeditoreditable")
+        var templatePreview = document.getElementById("templatepreview")
         var selectedValueB = document.querySelectorAll("#templatedrop select")[0]
           .value;
         
         if (selectedValueB == "1") {
           editorInput.innerHTML = '<div class="vidembed mw-100"> <div class="row"> <div class="col-12 col-sm-12 col-xl-6 d-flex flex-column justify-content-between"> <!-- *REPLACE THE CODE BELOW THIS LINE WITH YOUR VIDEO EMBED CODE* --> <img src="https://mum-mih.github.io/sandbox/Icons_vidplace.png" width="100%" height="auto"> <!-- *REPLACE THE CODE ABOVE THIS LINE WITH YOUR VIDEO EMBED CODE* --> </div> <div class="col-12 col-sm-12 col-xl-6 align-self-left" style="user-select: auto;"> <h4 style="user-select: auto;">[fa-info-circle] Title of your video<br style="user-select: auto;"></h4> <p><span dir="auto" class="style-scope yt-formatted-string">This is an embedded video. Instead of having to click on a link to reach your video, embedding the video on the main page allows students to have easier access to it. This works well with Youtube videos, H5P interactive videos, and Panopto videos. Instructions on how to replace this video with your own are provided on the left.<br style="user-select: auto;"><br style="user-select: auto;"><em style="user-select: auto;">Use this text area to provide a short description of the video and prompts where applicable. Why are they watching this video? What should they focus on?</em></span> </p> </div> </div> </div>';
+          templatePreview.innerHTML = '<p>Preview:</p><img src="https://mum-mih.github.io/sandbox/videotext.png" max-width="700px" height="auto">'
         } else if (selectedValueB == "2") {
           editorInput.innerHTML = '<div class="boxemphasis"> <h5>In our synchronous session this week, we will discuss the following:</h5><p></p> <ol> <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&nbsp;</li><li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp;</li><li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</li></ol> </div>';
+          templatePreview.innerHTML = '<p>Preview:</p><img src="https://mum-mih.github.io/sandbox/boxemphasis.png" max-width="600px" height="auto">'
         } else if (selectedValueB == "3") {
           editorInput.innerHTML = '<hr> <h4>Sub-Heading</h4><p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
+          templatePreview.innerHTML = '<p>Preview:</p><img src="https://mum-mih.github.io/sandbox/hrline.png" max-width="600px" height="auto">'        
         } else if (selectedValueB == "4") {
           editorInput.innerHTML = '<div class="jumbotron"> <div class="clearfix"> <div class="weekthumb"> <img src="https://mum-mih.github.io/sandbox/Icons_imgplace.png" width="100%" height="auto"> </div> <div class="weektitle"> <h1>Weekly Title/Topic Heading</h1> </div> <p><span></span></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br><span></span> <p></p> <hr class="my-4"> <div class="weeklos"> <p>Week\'s Learning Outcomes:</p> </div> <ol><li><span style="font-size: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&nbsp;</span></li><li><span style="font-size: 1rem;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp;</span></li><li><span style="font-size: 1rem;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&nbsp;</span></li><li><span style="font-size: 1rem;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span></li></ol> </div> </div>';
+          templatePreview.innerHTML = '<p>Preview:</p><img src="https://mum-mih.github.io/sandbox/jumboimage.png" max-width="600px" height="auto">'
         }
          $("#id_introeditoreditable").focus();
       }
