@@ -11,8 +11,8 @@
 
 window.addEventListener("load", function () {
   
-  var contentHtml = `<a href="https://essfs.ureview.org/" style="text-decoration: none; color: inherit;" target="_blank"><div class="container-fluid border p-0 m-0 mt-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/mumbanner.png" alt="Monash University Banner"></div></div></div></a>`;
-var contentHtmlb = `<a href="https://essfs.ureview.org/" style="text-decoration: none; color: inherit;" target="_blank"><div class="container-fluid border p-0 m-0 mb-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/mumbanner.png" alt="Monash University Banner"></div></div></div></a>`;
+  var contentHtml = `<a href="https://essfs.ureview.org/" style="text-decoration: none; color: inherit;" target="_blank"><div class="container-fluid border p-0 m-0 mt-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/Mumbanner.png" alt="Monash University Banner"></div></div></div></a>`;
+var contentHtmlb = `<a href="https://essfs.ureview.org/" style="text-decoration: none; color: inherit;" target="_blank"><div class="container-fluid border p-0 m-0 mb-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/Mumbanner.png" alt="Monash University Banner"></div></div></div></a>`;
 
  
   // Prepend the banner to the specified containers
