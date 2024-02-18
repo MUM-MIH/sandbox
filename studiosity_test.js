@@ -29,7 +29,8 @@ window.addEventListener("load", function () {
     $(".sectionname").each(function () {
         var text = $(this).text().trim().toLowerCase(); // Trim whitespace and convert to lowercase
         if (text === "support" || text === "getting started") {
-            $(this).after(contentHtmlb); // Use contentHtml or contentHtmlb as needed
+            // Find the closest parent that matches the `.course-section-header` class and append contentHtmlb after it
+            $(this).closest('.course-section-header').after(contentHtmlb);
         }
     });
 
