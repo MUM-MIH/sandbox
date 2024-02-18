@@ -9,15 +9,32 @@
   
 //});
 
-window.addEventListener("load", function () {
+//window.addEventListener("load", function () {
   
-  var contentHtml = `<a href="https://learning.monash.edu/mod/lti/view.php?id=2201233" style="text-decoration: none; color: inherit;" target="_blank" alt="Feel more confident with your writing before submitting. Access Monash&#39;s Studiosity for 24/6 fast feedback."><div class="container-fluid border p-0 m-0 mt-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/MUMstudiosity.png" alt="Monash University Banner"></div></div></div></a>`;
-var contentHtmlb = `<a href="https://learning.monash.edu/mod/lti/view.php?id=2201233" style="text-decoration: none; color: inherit;" target="_blank" alt="Feel more confident with your writing before submitting. Access Monash&#39;s Studiosity for 24/6 fast feedback."><div class="container-fluid border p-0 m-0 mb-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/MUMstudiosity.png" alt="Monash University Banner"></div></div></div></a>`;
+  //var contentHtml = `<a href="https://learning.monash.edu/mod/lti/view.php?id=2201233" style="text-decoration: none; color: inherit;" target="_blank" alt="Feel more confident with your writing before submitting. Access Monash&#39;s Studiosity for 24/6 fast feedback."><div class="container-fluid border p-0 m-0 mt-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/MUMstudiosity.png" alt="Monash University Banner"></div></div></div></a>`;
+//var contentHtmlb = `<a href="https://learning.monash.edu/mod/lti/view.php?id=2201233" style="text-decoration: none; color: inherit;" target="_blank" alt="Feel more confident with your writing before submitting. Access Monash&#39;s Studiosity for 24/6 fast feedback."><div class="container-fluid border p-0 m-0 mb-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/MUMstudiosity.png" alt="Monash University Banner"></div></div></div></a>`;
 
  
   // Prepend the banner to the specified containers
-  $('#coursecontentcollapse19').prepend(contentHtmlb);
-  $(".assessment-summary-widget").after(contentHtml);
-  $("#coursecontentcollapse4").prepend(contentHtmlb);
+ // $('#coursecontentcollapse19').prepend(contentHtmlb);
+ // $(".assessment-summary-widget").after(contentHtml);
+//  $("#coursecontentcollapse4").prepend(contentHtmlb);
   
+//});
+
+window.addEventListener("load", function () {
+    var contentHtml = `<a href="https://learning.monash.edu/mod/lti/view.php?id=2201233" style="text-decoration: none; color: inherit;" target="_blank" alt="Feel more confident with your writing before submitting. Access Monash's Studiosity for 24/6 fast feedback."><div class="container-fluid border p-0 m-0 mt-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/MUMstudiosity.png" alt="Monash University Banner"></div></div></div></a>`;
+    var contentHtmlb = `<a href="https://learning.monash.edu/mod/lti/view.php?id=2201233" style="text-decoration: none; color: inherit;" target="_blank" alt="Feel more confident with your writing before submitting. Access Monash's Studiosity for 24/6 fast feedback."><div class="container-fluid border p-0 m-0 mb-5"><div class="row gx-0 p-0" style="margin-right: 0; margin-left: 0;"><div class="col-12 p-0"><img class="img-fluid" src="https://mum-mih.github.io/sandbox/MUMstudiosity.png" alt="Monash University Banner"></div></div></div></a>`;
+
+    // Filter .sectionname elements that contain "Support" or "Getting Started" and append content directly after them
+    $(".sectionname").filter(function () {
+        var text = $(this).text();
+        return text === "Support" || text === "Getting Started";
+    }).each(function () {
+        // Append contentHtml or contentHtmlb directly after the .sectionname element
+        $(this).after(contentHtmlb); // Use contentHtml or contentHtmlb as needed
+    });
+
+    // This remains the same - appending after a specific widget
+    $(".assessment-summary-widget").after(contentHtml);
 });
