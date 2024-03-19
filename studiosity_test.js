@@ -38,6 +38,6 @@ window.addEventListener("load", function () {
     $(".assessment-summary-widget").after(contentHtml);
 
 //add essfs advertisement
- $("#region-main").before('<a href="https://essfs.ureview.org/" target="_blank"><img src="https://mum-mih.github.io/sandbox/ESSFS_moodle_2024S1.png" alt="Image showing ipad and grab vouchers with the text, Take the Early Semester Student Feedback Survey and stand a chance to win 500 grab vouchers and an Ipad air 64BG" style="width:1750px;margin-bottom:15px"></a>');
+ $("#region-main").before('<a href="https://essfs.ureview.org/" target="_blank"><img src="https://mum-mih.github.io/sandbox/ESSFS_moodle_2024S1.png" alt="Image showing ipad and grab vouchers with the text, Take the Early Semester Student Feedback Survey and stand a chance to win 500 grab vouchers and an Ipad air 64BG" style="width:100%;margin-bottom:15px"></a>');
 
 });
