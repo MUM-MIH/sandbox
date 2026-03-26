@@ -16,11 +16,6 @@ window.addEventListener("load", function () {
                 'style="width:100%;margin-bottom:15px">' +
                 '</a>'
             );
-            console.log("Banner added successfully");
-        } else {
-            console.log("#region-main not found");
+           
         }
-    } else {
-        console.log("Not a course page or no section parameter");
-    }
 });
